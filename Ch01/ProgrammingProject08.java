@@ -5,7 +5,7 @@
   
   
 */
-public class Ch01ProgrammingProject08 {
+public class ProgrammingProject08 {
     public static final double distance = 6.21;
     public static void main(String[] args) throws Exception {
         System.out.println("This program caculates your pace given a time and distance traveled.");

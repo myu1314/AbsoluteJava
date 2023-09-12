@@ -5,7 +5,7 @@
   
   
 */
-public class Ch01ProgrammingProject07 {
+public class ProgrammingProject07 {
     public static void main(String[] args) throws Exception {
         final int SECONDS = 50391;
         int days = SECONDS/(24 * 60 * 60);

@@ -5,7 +5,7 @@
   
   
 */
-public class Ch01ProgrammingProject05 {
+public class ProgrammingProject05 {
     public static void main(String[] args) throws Exception {
         String text = "I hate you.";
         System.out.println("The line of text to be changed is:\n" + text);

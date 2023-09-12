@@ -5,7 +5,7 @@
   
   
 */
-public class Ch01ProgrammingProject03MDS {
+public class ProgrammingProject03MDS {
     public static void main(String[] args) throws Exception {
         String first = "MICHEAL";
         String last = "SIMON";

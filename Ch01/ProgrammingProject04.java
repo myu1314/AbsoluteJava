@@ -5,7 +5,7 @@
   
   
 */
-public class Ch01ProgrammingProject04 {
+public class ProgrammingProject04 {
     public static void main(String[] args) throws Exception {
         final double AMOUNT_OF_ARTIFICAL_SWEETENER_TO_KILL_MOUSE = .08; 
         final double MOUSE_WEIGHT = 30;

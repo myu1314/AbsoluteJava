@@ -5,7 +5,7 @@
   
   
 */
-public class Ch01ProgrammingProject10 {
+public class ProgrammingProject10 {
     public static int AMOUNT_TO_KILL = 1200;
     public static int COFFEE_AMOUNT = 16; 
     public static int COFFEE_COUNT = 160;

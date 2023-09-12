@@ -5,7 +5,7 @@
   
   
 */
-public class Ch01ProgrammingProject09 {
+public class ProgrammingProject09 {
     public static int MIN_HEIGHT = 5;
     public static int MIN_WEIGHT = 110; 
     public static int POUNDS_PER_INCH = 5;

@@ -5,7 +5,7 @@
   
   
 */
-public class Ch01ProgrammingProject01 {
+public class ProgrammingProject01 {
     public static void main(String[] args) {
         final double WEIGHT_KG_TO_LBS = 2.2;
         final double timeMinToHour = 60;
