@@ -26,6 +26,8 @@ public class ProgrammingProject02 {
         String lNResult = lNSecondLetter + lNEndingLetters + lNFirstLetter + "ay";
         String finalResults =  fNResult + " " + lNResult;
         System.out.println("Your name in Pig Latin is: " + finalResults);
+
+        keyboard.close();
      }
 }
 /*

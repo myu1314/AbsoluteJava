@@ -27,7 +27,7 @@ public class ProgrammingProject01 {
         guess = (guess + r) / 2;
         
         System.out.printf("The square root of the number is aproximitly %.2f", guess);
-
+        keyboard.close();
     }
 }
 /*

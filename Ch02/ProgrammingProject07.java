@@ -18,7 +18,7 @@ public class ProgrammingProject07 {
         System.out.printf("%-30s%-30.2f \n","Cost:",itemCost);
         System.out.printf("%-30s%-30s\n","Amount Given:","$1.00");       
         System.out.printf("%-30s%-30s\n","Change:",returnAmount); 
-               
+        keyboard.close();
             
     }
 }

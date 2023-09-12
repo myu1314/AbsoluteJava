@@ -11,17 +11,19 @@ import java.util.Scanner;
 public class ProgrammingProject06 {
     public static void main(String[] args) throws Exception {
         System.out.print("Amount to kill? ");
-        Scanner ATKPrompt = new Scanner(System.in);
-        double ATK = ATKPrompt.nextDouble();
+        Scanner keyboard = new Scanner(System.in);
+        double ATK = keyboard.nextDouble();
         System.out.print("Mouse Weight? ");
-        Scanner MWPrompt = new Scanner(System.in);
-        int MW =  MWPrompt.nextInt();
+        
+        int MW =  keyboard.nextInt();
         System.out.print("Desired Weight? ");
-        Scanner DWPrompt = new Scanner(System.in); 
-        int DW = DWPrompt.nextInt();
+
+        int DW = keyboard.nextInt();
         final double SIS = 0.001;
         double SDC = ((ATK * MW)/DW)/SIS;
         System.out.printf("The Amount of diet soda is  needed to kill you is %5.2f", SDC);
+
+        keyboard.close();
     }
 }
 /*

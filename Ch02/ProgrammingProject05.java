@@ -11,25 +11,24 @@ import java.util.Scanner;
 public class ProgrammingProject05 {
      public static void main(String[] args) throws Exception {
         System.out.print("Input the name of the item? ");
-        Scanner item1NamePrompt = new Scanner(System.in);
-        String item1Name = item1NamePrompt.next();
-        String item = item.toLowerCase();
+        Scanner keyboard = new Scanner(System.in);
+
+        String item1Name = keyboard.next();
+        String item = item1Name.toLowerCase();
 
         System.out.print("What was the price to purchase of the item");
-        Scanner purchasePrompt = new Scanner(System.in);
-        double purchasePrice = purchasePrompt.nextDouble();
+        double purchasePrice = keyboard.nextDouble();
 
         System.out.print("How much did the item sell for? ");
-        Scanner salvagePrompt = new Scanner(System.in);
-        double salvagePrice = salvagePrompt.nextDouble();
+        double salvagePrice = keyboard.nextDouble();
 
         System.out.print("For how many years was it in use? ");
-        Scanner YearsPrompt = new Scanner(System.in);
-        double yearsInUse = YearsPrompt.nextDouble();
+        double yearsInUse = keyboard.nextDouble();
 
 
         double yearlyDepriciation = (purchasePrice - salvagePrice)/yearsInUse;
         System.out.printf("The yearly depriciation of the %s is $%5.2f",item,yearlyDepriciation);
+        keyboard.close();
     }
 }
 /*

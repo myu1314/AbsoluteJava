@@ -10,18 +10,21 @@ import java.util.Scanner;
 
 public class ProgrammingProject04 {
     public static void main(String[] args) throws Exception {
-        
+        Scanner keyboard = new Scanner(System.in);
+
+
         System.out.print("How much distance was traveled? ");
-        Scanner distancePrompt = new Scanner(System.in);
-        double miles = distancePrompt.nextDouble();
+        
+        double miles = keyboard.nextDouble();
         System.out.print("How many miles can automobile travel per gallon? ");
-        Scanner MPGPrompt = new Scanner(System.in);
-        double MPG = MPGPrompt.nextDouble();
+       
+        double MPG = keyboard.nextDouble();
         System.out.print("What is the cost per gallon? ");
-        Scanner CPGPrompt = new Scanner(System.in);
-        double CPG = CPGPrompt.nextDouble();
+
+        double CPG = keyboard.nextDouble();
         double cost = miles/MPG * CPG;
         System.out.printf("The cost of your trip is $%5.2f",cost);
+        keyboard.close();
 
     }
 }
