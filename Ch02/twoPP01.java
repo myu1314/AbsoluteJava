@@ -8,7 +8,7 @@
 
 import java.util.Scanner;
 
-public class PP01 {
+public class twoPP01 {
     public static void main(String[] args) throws Exception {
         System.out.println("What is the number that you want to be square rooted?");
         Scanner keyboard = new Scanner(System.in);
