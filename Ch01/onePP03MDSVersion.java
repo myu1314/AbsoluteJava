@@ -5,18 +5,18 @@
   
   
 */
-public class ProgrammingProject03 {
+public class onePP03MDSVersion {
     public static void main(String[] args) throws Exception {
-        String first = "walt";
-        String last = "savitch";
+        String first = "MICHEAL";
+        String last = "SIMON";
 
         first = first.substring(1,2).toUpperCase() +
-                first.substring(2) +
-                first.substring(0,1) +
+                first.substring(2).toLowerCase() +
+                first.substring(0,1).toLowerCase() +
                 "ay";
         last = last.substring(1,2).toUpperCase() +
-                last.substring(2) +
-                last.substring(0,1) +
+                last.substring(2).toLowerCase() +
+                last.substring(0,1).toLowerCase() +
                 "ay";
 
         System.out.println(first + " " + last);

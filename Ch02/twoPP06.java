@@ -8,7 +8,7 @@
 
 import java.util.Scanner;
 
-public class ProgrammingProject06 {
+public class twoPP06 {
     public static void main(String[] args) throws Exception {
         System.out.print("Amount to kill? ");
         Scanner keyboard = new Scanner(System.in);

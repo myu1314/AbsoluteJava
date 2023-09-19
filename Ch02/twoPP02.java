@@ -8,7 +8,7 @@
 
 import java.util.Scanner;
 
-public class ProgrammingProject02 {
+public class twoPP02 {
     public static void main(String[] args) throws Exception {
         Scanner keyboard = new Scanner(System.in);
         System.out.print("What is your first name and last name? ");

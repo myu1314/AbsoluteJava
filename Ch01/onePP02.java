@@ -5,7 +5,7 @@
   
   
 */
-public class ProgrammingProject02 {
+public class onePP02 {
     public static void main(String[] args) {
         final double COUPONS_PER_CANDY = 10;
         final double COUPUNS_PER_GUM = 3;

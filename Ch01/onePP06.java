@@ -5,7 +5,7 @@
   
   
 */
-public class ProgrammingProject06 {
+public class onePP06 {
     public static void main(String[] args) throws Exception {
         double cadance = 90;
         double gearSize = 100;

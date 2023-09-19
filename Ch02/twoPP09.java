@@ -8,7 +8,7 @@
 
 import java.util.Scanner;
 
-public class ProgrammingProject09 {
+public class twoPP09 {
     public static void main(String[] args) throws Exception {
         Scanner keyboard = new Scanner(System.in);
         System.out.println("Phrase?");

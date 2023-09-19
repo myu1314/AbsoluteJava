@@ -1,5 +1,5 @@
 
-public class ProgrammingProject01MDSversion {
+public class onePP01MDSversion {
     public static void main(String[] args) {
         final double WEIGHT_KG_TO_LBS = 2.2;
         final double timeMinToHour = 60;

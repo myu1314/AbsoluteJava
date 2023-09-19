@@ -8,7 +8,7 @@
 
 import java.util.Scanner;
 
-public class ProgrammingProject04 {
+public class twoPP04 {
     public static void main(String[] args) throws Exception {
         Scanner keyboard = new Scanner(System.in);
 

@@ -8,7 +8,7 @@
 
 import java.util.Scanner;
 
-public class ProgrammingProject05 {
+public class twoPP05 {
      public static void main(String[] args) throws Exception {
         System.out.print("Input the name of the item? ");
         Scanner keyboard = new Scanner(System.in);
