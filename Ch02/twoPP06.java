@@ -1,7 +1,7 @@
 /*
     Author: Mark Yu
     Last Updated: 9/5/2023
-    Description: Pig Latin
+    Description: Diet Soda Death
   
   
 */
@@ -28,6 +28,8 @@ public class twoPP06 {
 }
 /*
  * ****************************OUTPUT**************************************
- * What is your first name and last name? walter savitch
-* Your name in Pig Latin is: Alterway Avitchsay
+ * Amount to kill? 10
+ * Mouse Weight? 5
+ * Desired Weight? 150
+ * The Amount of diet soda is  needed to kill you is 333.33
  */

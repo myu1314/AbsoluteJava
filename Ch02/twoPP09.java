@@ -25,6 +25,10 @@ public class twoPP09 {
 }
 /*
  * ****************************OUTPUT**************************************
- * What is your first name and last name? walter savitch
-* Your name in Pig Latin is: Alterway Avitchsay
+ * Phrase?
+ * I hate you
+ * The line of text to be changed is:
+ * "I hate you"
+ * I have rephrased that line to read:
+ * "I loveate you"
  */

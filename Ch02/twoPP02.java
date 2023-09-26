@@ -33,5 +33,5 @@ public class twoPP02 {
 /*
  * ****************************OUTPUT**************************************
  * What is your first name and last name? walter savitch
-* Your name in Pig Latin is: Alterway Avitchsay
+ * Your name in Pig Latin is: Alterway Avitchsay
  */

@@ -1,7 +1,7 @@
 /*
     Author: Mark Yu
-    Last Updated: 9/5/2023
-    Description: Pig Latin
+    Last Updated: 9/8/2023
+    Description: Gas Prices
   
   
 */
@@ -30,6 +30,8 @@ public class twoPP04 {
 }
 /*
  * ****************************OUTPUT**************************************
- * What is your first name and last name? walter savitch
-* Your name in Pig Latin is: Alterway Avitchsay
+ * How much distance was traveled? 100
+ * How many miles can automobile travel per gallon? 10
+ * What is the cost per gallon? 5
+ * The cost of your trip is $50.00
  */

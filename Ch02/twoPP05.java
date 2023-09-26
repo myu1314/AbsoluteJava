@@ -1,7 +1,7 @@
 /*
     Author: Mark Yu
     Last Updated: 9/5/2023
-    Description: Pig Latin
+    Description: Depriciation Calculator
   
   
 */
@@ -16,7 +16,7 @@ public class twoPP05 {
         String item1Name = keyboard.next();
         String item = item1Name.toLowerCase();
 
-        System.out.print("What was the price to purchase of the item");
+        System.out.print("What was the price to purchase of the item? ");
         double purchasePrice = keyboard.nextDouble();
 
         System.out.print("How much did the item sell for? ");
@@ -33,6 +33,9 @@ public class twoPP05 {
 }
 /*
  * ****************************OUTPUT**************************************
- * What is your first name and last name? walter savitch
-* Your name in Pig Latin is: Alterway Avitchsay
+ * Input the name of the item? Bike
+ * What was the price to purchase of the item? 100
+ * How much did the item sell for? 50
+ * For how many years was it in use? 10
+ * The yearly depriciation of the bike is $ 5.00
  */

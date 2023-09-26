@@ -65,12 +65,6 @@ public class twoPP10 {
         String heading3 = "Price";
         String heading4 = "Total";
 
-        try {
-            Runtime.getRuntime().exec("cls");
-            
-        } catch (final  Exception e) {
-            System.out.println("noNONONO");
-        }
 
         System.out.println("Your Bill:");
         System.out.println("===========================================================");
@@ -86,6 +80,22 @@ public class twoPP10 {
 }
 /*
  * ****************************OUTPUT**************************************
- * What is your first name and last name? walter savitch
-* Your name in Pig Latin is: Alterway Avitchsay
- */
+ * Input the name of item 1. Peanuts
+ * Input the quantity of Item 1. 3
+ * Input the price of Item 1. 2
+ * Input the name of item 2. Eggs
+ * Input the quantity of Item 2. 5
+ * Input the price of Item 2. 1
+ * Input the name of item 3. Strawberries
+ * Input the quantity of Item 3. 1
+ * Input the price of Item 3. 6
+ * Your Bill:
+ * ===========================================================
+ * Item                          Quantity  |Price     Total
+ * Peanuts                       3         |$2.00      $6.00
+ * Eggs                          5         |$1.00      $5.00
+ * Strawberries                  1         |$6.00      $6.00       
+ * Subtotal                                          $17.00
+ * 6.25% Sales Tax                                   $      1.06
+ * Total                                             $     18.06
+*/
