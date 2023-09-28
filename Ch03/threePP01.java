@@ -25,7 +25,7 @@ public class threePP01 {
             guess = (guess + r) / 2;
             percentage = (guess-previousGuess)/previousGuess * 100;
         }
-        printf("The final answer is %0.2d. ", guess);
+        System.out.printf("The final answer is %2.2f. ", guess);
        keyboard.close();
     }
 }
