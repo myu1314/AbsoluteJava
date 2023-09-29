@@ -22,50 +22,47 @@ public class threePP02 {
         // L1
         System.out.println("Letter for item 1: ");
         l1 = keyboard.nextLine();
-        valid = check("S",l1);
-        if (valid == true){
+        valid = check("", l1);
+        if (valid == true) {
             finalString += l1;
-        }
-        else if(valid == false){
+        } else if (valid == false) {
             System.out.println("Program doesn't accept");
             System.exit(0);
         }
-        
+
         // L2
         System.out.println("Letter for item 2: ");
         l2 = keyboard.nextLine();
-        valid = check(l1,l2);
-        if (valid == true){
+        valid = check(l1, l2);
+        if (valid == true) {
             finalString += l2;
-        }
-        else if(valid == false){
+        } else if (valid == false) {
             System.out.println("Program doesn't accept");
             System.exit(0);
         }
 
         System.out.println(finalString);
-       keyboard.close();
+        keyboard.close();
     }
-     static boolean check(String previousletter,String letter ){
+
+    static boolean check(String previousletter, String letter) {
         boolean result;
         System.out.println(previousletter);
         System.out.println(letter);
-        if(previousletter != letter ){
+        if (previousletter != letter) {
             System.out.println("noonon");
-            if(letter == "R"){ // || letter == "B" || letter == "G"){
-                System.out.println("noonon");
-                result = true;
-            }
-            else{
+            if (letter.equals("R") || letter.equals("B")|| letter.equals("G")) { //){
+                  System.out.println("part of");
+                  result = true;
+            } else {
+
                 result = false;
-            }           
-        }
-        else{
-            result = false;
-        }
-        System.out.println(result);
-        return result;
-     };
+              }
+          } else {
+             result = false;
+            }
+            System.out.println(result);
+
 }
 /*
  * ****************************OUTPUT**************************************
