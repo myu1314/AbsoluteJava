@@ -41,28 +41,58 @@ public class threePP02 {
             System.exit(0);
         }
 
-        System.out.println(finalString);
+        // L3
+        System.out.println("Letter for item 3: ");
+        l3 = keyboard.nextLine();
+        valid = check(l2, l3);
+        if (valid == true) {
+            finalString += l3;
+        } else if (valid == false) {
+            System.out.println("Program doesn't accept");
+            System.exit(0);
+        }
+
+        // L4
+        System.out.println("Letter for item 4: ");
+        l4 = keyboard.nextLine();
+        valid = check(l3, l4);
+        if (valid == true) {
+            finalString += l4;
+        } else if (valid == false) {
+            System.out.println("Program doesn't accept");
+            System.exit(0);
+        }
+
+        // L5
+        System.out.println("Letter for item 5: ");
+        l5 = keyboard.nextLine();
+        valid = check(l4, l5);
+        if (valid == true) {
+            finalString += l5;
+        } else if (valid == false) {
+            System.out.println("Program doesn't accept");
+            System.exit(0);
+        }
+
+        System.out.printf("The final pattern result is: %s", finalString);
         keyboard.close();
     }
 
     static boolean check(String previousletter, String letter) {
         boolean result;
-        System.out.println(previousletter);
-        System.out.println(letter);
-        if (previousletter != letter) {
-            System.out.println("noonon");
-            if (letter.equals("R") || letter.equals("B")|| letter.equals("G")) { //){
-                  System.out.println("part of");
-                  result = true;
+        if (previousletter.equals(letter)) {
+            result = false;
+        } else {
+            if (letter.equals("R") || letter.equals("B") || letter.equals("G")) { // ){
+                result = true;
             } else {
 
                 result = false;
-              }
-          } else {
-             result = false;
             }
-            System.out.println(result);
 
+        }
+        return result;
+    }
 }
 /*
  * ****************************OUTPUT**************************************
