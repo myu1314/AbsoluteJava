@@ -96,6 +96,15 @@ public class threePP02 {
 }
 /*
  * ****************************OUTPUT**************************************
- * What is the number that you want to be square rooted? 4
- * The square root of the number is aproximitly 2.00
+ * Letter for item 1:  
+ * R
+ * Letter for item 2:
+ * G
+ * Letter for item 3:
+ * B
+ * Letter for item 4:
+ * G
+ * Letter for item 5:
+ * R
+ * The final pattern result is: RGBGR
  */
