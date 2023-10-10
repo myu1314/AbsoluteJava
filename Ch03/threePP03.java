@@ -10,11 +10,19 @@ import java.util.Scanner;
 
 public class threePP03 {
     public static void main(String[] args) throws Exception {
+        Scanner keyboard = new Scanner(System.in);
+        String result = "true";
+        while(result.equals("true")){
+            System.out.println("On Earth or Moon:");
+            String place = keyboard.nextLine();
+            
+        }
     }
+
 }
 /*
  * ****************************OUTPUT**************************************
- * Letter for item 1:  
+ * Letter for item 1:
  * R
  * Letter for item 2:
  * G
