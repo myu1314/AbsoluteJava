@@ -19,5 +19,5 @@ public class onePP09 {
 }
 /*
  * ****************************OUTPUT**************************************
- *This is your ideal body weight: 185 pounds.
+ * This is your ideal body weight: 185 pounds.
  */

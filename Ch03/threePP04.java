@@ -1,7 +1,7 @@
 /*
     Author: Mark Yu
     Last Updated: 10/9/2023
-    Description:  Allows for RGB strip to be created
+    Description:  Inflation Calcuator
   
   
 */
@@ -14,7 +14,6 @@ public class threePP04 {
         double currentPrice;
         double futurePrice;
         double yearsFromNow;
-        double purchaseAmount;
         double inflation;
         System.out.println("What is the current price:");
         currentPrice = keyboard.nextDouble();
@@ -26,7 +25,8 @@ public class threePP04 {
         for(int years = 0; years <= yearsFromNow; years++){
             currentPrice += currentPrice * inflation;
         }
-        System.out.printf("The price %2.2f years into the future is: $%2.2f \n",yearsFromNow, currentPrice);
+        futurePrice = currentPrice;
+        System.out.printf("The price %2.2f years into the future is: $%2.2f \n",yearsFromNow, futurePrice);
         keyboard.close();
     }
    
@@ -34,15 +34,11 @@ public class threePP04 {
 }
 /*
  * ****************************OUTPUT**************************************
- * Letter for item 1:
- * R
- * Letter for item 2:
- * G
- * Letter for item 3:
- * B
- * Letter for item 4:
- * G
- * Letter for item 5:
- * R
- * The final pattern result is: RGBGR
+ * What is the current price:
+ * 100
+ * What is the inflation rate (as a percent):
+ * 5
+ * How many years in the future will it be:
+ * 5
+ * The price 5.00 years into the future is: $134.01
  */

@@ -1,7 +1,7 @@
 /*
     Author: Mark Yu
-    Last Updated: 10/9/2023
-    Description:  Inflation Calcuator
+    Last Updated: 10/10/2023
+    Description:  Debt Calculator
   
   
 */
@@ -10,25 +10,29 @@ import java.util.Scanner;
 
 public class threePP05 {
     public static void main(String[] args) throws Exception {
-
+        final double  INTEREST_RATE = 0.015;
+        final double ORIGINAL_COST = 1000;
+        final double MONTHLY_PAYMENT = 50;
 
         Scanner keyboard = new Scanner(System.in);
+        double debtRemaning = ORIGINAL_COST;
         double interestMonthly;
-        double interestTotal;
-        double yearsFromNow;
-        double inflation;
-        System.out.println("What is the current price:");
-        currentPrice = keyboard.nextDouble();
-        System.out.println("What is the inflation rate (as a percent):");
-        inflation = keyboard.nextDouble();
-        inflation = inflation/100;
-        System.out.println("How many years in the future will it be: ");
-        yearsFromNow = keyboard.nextDouble();
-        for(int years = 0; years <= yearsFromNow; years++){
-            currentPrice += currentPrice * inflation;
+        double debtReduction;
+        double interestTotal = 0;
+        int month = 0;
+        
+        while (debtRemaning >= 0){
+            month += 1;
+            interestMonthly = debtRemaning * INTEREST_RATE;
+            interestTotal += interestMonthly;
+            debtReduction = MONTHLY_PAYMENT - interestMonthly;
+            debtRemaning -= debtReduction;
+            System.out.println("Month " + month);
+            System.out.printf("Amount Paid: $50 \n");
+            System.out.printf("Amount Due from Interest: %2.2f \n", interestTotal);
+            System.out.printf("Debt Remaining %2.2f \n", debtRemaning);
         }
-        futurePrice = currentPrice;
-        System.out.printf("The price %2.2f years into the future is: $%2.2f \n",yearsFromNow, futurePrice);
+        System.out.printf("Total interest paid: %2.2f \n", interestTotal);
         keyboard.close();
     }
    
@@ -36,11 +40,14 @@ public class threePP05 {
 }
 /*
  * ****************************OUTPUT**************************************
- * What is the current price:
- * 100
- * What is the inflation rate (as a percent):
- * 5
- * How many years in the future will it be:
- * 5
- * The price 5.00 years into the future is: $134.01
+ * Month 1
+ * Amount Paid: $50
+ * Amount Due from Interest: 15.00
+ * Debt Remaining 965.00 ...
+ * 
+ * Month 24
+ * Amount Paid: $50
+ * Amount Due from Interest: 197.83
+ * Debt Remaining -2.17
+ * Total interest paid: 197.83
  */

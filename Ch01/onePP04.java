@@ -28,10 +28,3 @@ public class onePP04 {
  * ****************************OUTPUT**************************************
  * The amount of soda a day in grams is 186666.6666666667 thats about 186 liters a day.
  */
-
- /*
-  * 
-  mouse / ammount
-
-  desired / 
-  */
