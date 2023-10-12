@@ -1,6 +1,6 @@
 /*
     Author: Mark Yu
-    Last Updated: 10/10/2023
+    Last Updated: 10/11/2023
     Description:  Debt Calculator
   
   
@@ -29,7 +29,7 @@ public class threePP05 {
             debtRemaning -= debtReduction;
             System.out.println("Month " + month);
             System.out.printf("Amount Paid: $50 \n");
-            System.out.printf("Amount Due from Interest: %2.2f \n", interestTotal);
+            System.out.printf("Amount Due from Interest: %2.2f \n", interestMonthly);
             System.out.printf("Debt Remaining %2.2f \n", debtRemaning);
         }
         System.out.printf("Total interest paid: %2.2f \n", interestTotal);
