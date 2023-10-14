@@ -1,7 +1,7 @@
 /*
     Author: Mark Yu
-    Last Updated: 10/11/2023
-    Description:  Debt Calculator
+    Last Updated: 10/13/2023
+    Description:  Green Crud Calculator
   
   
 */
@@ -10,29 +10,29 @@ import java.util.Scanner;
 
 public class threePP06 {
     public static void main(String[] args) throws Exception {
-        final double  INTEREST_RATE = 0.015;
-        final double ORIGINAL_COST = 1000;
-        final double MONTHLY_PAYMENT = 50;
-
         Scanner keyboard = new Scanner(System.in);
-        double debtRemaning = ORIGINAL_COST;
-        double interestMonthly;
-        double debtReduction;
-        double interestTotal = 0;
-        int month = 0;
+        final double STARTING_CRUD  = 10;
+        final double CRUD_GROWING_DAYS = 5;
+
         
-        while (debtRemaning >= 0){
-            month += 1;
-            interestMonthly = debtRemaning * INTEREST_RATE;
-            interestTotal += interestMonthly;
-            debtReduction = MONTHLY_PAYMENT - interestMonthly;
-            debtRemaning -= debtReduction;
-            System.out.println("Month " + month);
-            System.out.printf("Amount Paid: $50 \n");
-            System.out.printf("Amount Due from Interest: %2.2f \n", interestTotal);
-            System.out.printf("Debt Remaining %2.2f \n", debtRemaning);
+        double currentCrud = STARTING_CRUD;
+        double previousCrud = 0;
+        double daysOfSimulation;
+        double holder;
+        double totalAmount = currentCrud;
+        double daysThatHavePassed = 0;
+        System.out.println("Days that simulation run: ");
+        daysOfSimulation = keyboard.nextDouble();
+        while ( daysOfSimulation/CRUD_GROWING_DAYS >= 0){
+            System.out.printf("Day %2.0f: %2.0f \n",daysThatHavePassed, totalAmount);
+            holder = currentCrud;
+            totalAmount = currentCrud + previousCrud;
+            previousCrud = holder;
+            currentCrud = totalAmount;  
+            daysOfSimulation -= 5;
+            daysThatHavePassed += 5;
         }
-        System.out.printf("Total interest paid: %2.2f \n", interestTotal);
+        System.out.printf("On the final day there are %2.0f green cruds. \n", totalAmount);
         keyboard.close();
     }
    
@@ -40,14 +40,17 @@ public class threePP06 {
 }
 /*
  * ****************************OUTPUT**************************************
- * Month 1
- * Amount Paid: $50
- * Amount Due from Interest: 15.00
- * Debt Remaining 965.00 ...
- * 
- * Month 24
- * Amount Paid: $50
- * Amount Due from Interest: 197.83
- * Debt Remaining -2.17
- * Total interest paid: 197.83
+ * Days that simulation run: 
+ * 50
+ * Day  0: 10 
+ * Day  5: 10 
+ * Day 10: 20 
+ * Day 15: 30 
+ * Day 20: 50
+ * Day 25: 80
+ * Day 30: 130
+ * Day 35: 210
+Day 40: 340
+Day 45: 550
+Day 50: 890
  */
