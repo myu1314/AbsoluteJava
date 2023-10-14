@@ -23,14 +23,15 @@ public class threePP06 {
         double daysThatHavePassed = 0;
         System.out.println("Days that simulation run: ");
         daysOfSimulation = keyboard.nextDouble();
+        System.out.printf("Day %2.0f: %2.0f \n",daysThatHavePassed, totalAmount);
         while ( daysOfSimulation/CRUD_GROWING_DAYS >= 0){
-            System.out.printf("Day %2.0f: %2.0f \n",daysThatHavePassed, totalAmount);
             holder = currentCrud;
             totalAmount = currentCrud + previousCrud;
             previousCrud = holder;
             currentCrud = totalAmount;  
             daysOfSimulation -= 5;
             daysThatHavePassed += 5;
+            System.out.printf("Day %2.0f: %2.0f \n",daysThatHavePassed, totalAmount);
         }
         System.out.printf("On the final day there are %2.0f green cruds. \n", totalAmount);
         keyboard.close();
