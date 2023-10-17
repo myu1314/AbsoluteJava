@@ -1,7 +1,7 @@
 /*
     Author: Mark Yu
-    Last Updated: 10/13/2023
-    Description:  Green Crud Calculator
+    Last Updated: 10/16/2023
+    Description:  Finding Armstrong Numbers
   
   
 */
@@ -11,12 +11,11 @@ import java.util.Scanner;
 public class threePP07 {
     public static void main(String[] args) throws Exception {
         Scanner keyboard = new Scanner(System.in);
-        final double STARTING_CRUD  = 10;
-        final double CRUD_GROWING_DAYS = 5;
 
         
-        double currentCrud = STARTING_CRUD;
-        double previousCrud = 0;
+        double digit1;
+        double digit2;
+        double digit3;
         double daysOfSimulation;
         double holder;
         double totalAmount = currentCrud;
