@@ -15,10 +15,10 @@ public class threePP06 {
         final double CRUD_GROWING_DAYS = 5;
         double currentCrud;
         double previousCrud;
-        double daysOfSimulation;
+        double daysOfSimulation= 0;
         double holder;
         double totalAmount;
-        double daysThatHavePassed;
+        double daysThatHavePassed ;
         String result = "y";
         while (result.equals("y")) {
             currentCrud = STARTING_CRUD;
@@ -29,16 +29,19 @@ public class threePP06 {
             System.out.println("Days that simulation run: ");
             daysOfSimulation = keyboard.nextDouble();
             System.out.printf("Day %2.0f: %2.0f \n", daysThatHavePassed, totalAmount);
-            while (daysOfSimulation / CRUD_GROWING_DAYS >= 0) {
+            while ((daysOfSimulation-daysThatHavePassed)>=5) {
+            // while (daysThatHavePassed < daysOfSimulation && (daysOfSimulation-daysThatHavePassed)>=5) {
                 holder = currentCrud;
                 totalAmount = currentCrud + previousCrud;
                 previousCrud = holder;
                 currentCrud = totalAmount;
-                daysOfSimulation -= 5;
+                
+                //daysOfSimulation -= 5;
                 daysThatHavePassed += 5;
                 System.out.printf("Day %2.0f: %2.0f \n", daysThatHavePassed, totalAmount);
                 
             }
+            System.out.printf("On the final day there are %2.0f green cruds\n", totalAmount);
             System.out.println("Would you like to repeat the program?(y/n)");
             keyboard.nextLine();
             result = keyboard.nextLine();
