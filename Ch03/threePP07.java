@@ -7,34 +7,33 @@
 */
 
 import java.util.Scanner;
+import java.lang.Math;
 
 public class threePP07 {
     public static void main(String[] args) throws Exception {
         Scanner keyboard = new Scanner(System.in);
-        int digit1;
-        int digit2;
-        int digit3;
+        int numOfDigit;
+        int checkNum;
         int start;
         int end;
         String result = "y";
         while (result.equals("y")) {
-            digit1 = 0;
-            digit2 = 0;
-            digit3 = 0;
+            numOfDigit = 1;
             System.out.println("Starting Number: ");
             start = keyboard.nextInt();
             System.out.println("Ending Number: ");
             end = keyboard.nextInt();
-            daysOfSimulation = keyboard.nextDouble();
-            System.out.printf("Day %2.0f: %2.0f \n", daysThatHavePassed, totalAmount);
-            while (daysOfSimulation / CRUD_GROWING_DAYS >= 0) {
-                holder = currentCrud;
-                totalAmount = currentCrud + previousCrud;
-                previousCrud = holder;
-                currentCrud = totalAmount;
-                daysOfSimulation -= 5;
-                daysThatHavePassed += 5;
-                System.out.printf("Day %2.0f: %2.0f \n", daysThatHavePassed, totalAmount);
+
+            
+            checkNum = start;
+
+            while (start >= end) {
+                while(checkNum/Math.pow(10,numOfDigit) < 10){
+                    numOfDigit +=1;
+                }
+                int exponents;
+                if(num =)
+               checkNum +=1;
                 
             }
             System.out.println("Would you like to repeat the program?(y/n)");
