@@ -23,16 +23,13 @@ public class threePP07 {
             start = keyboard.nextInt();
             System.out.println("Ending Number: ");
             end = keyboard.nextInt();
-
-            
             checkNum = start;
-
             while (start >= end) {
                 while(checkNum/Math.pow(10,numOfDigit) < 10){
                     numOfDigit +=1;
                 }
                 int exponents;
-                if(num =)
+                if(num <= 3)
                checkNum +=1;
                 
             }

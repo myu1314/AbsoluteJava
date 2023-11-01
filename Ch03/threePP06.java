@@ -53,19 +53,16 @@ public class threePP06 {
 }
 /*
  * ****************************OUTPUT**************************************
- * Days that simulation run:
- * 50
- * Day 0: 10
- * Day 5: 10
- * Day 10: 20
- * Day 15: 30
- * Day 20: 50
- * Day 25: 80
- * Day 30: 130
- * Day 35: 210
- * Day 40: 340
- * Day 45: 550
- * Day 50: 890
- * Day 55: 1440
- * On the final day there are 1440 green cruds.
+ * Days that simulation run: 
+ * 30
+ * Day  0: 10 
+ * Day  5: 10 
+ * Day 10: 20 
+ * Day 15: 30 
+ * Day 20: 50 
+ * Day 25: 80 
+ * Day 30: 130 
+ * On the final day there are 130 green cruds
+ * Would you like to repeat the program?(y/n)
+ * n
  */
