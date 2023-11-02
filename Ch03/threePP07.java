@@ -13,9 +13,11 @@ public class threePP07 {
     public static void main(String[] args) throws Exception {
         Scanner keyboard = new Scanner(System.in);
         int numOfDigit;
-        int checkNum;
+        double checkNum;
         int start;
         int end;
+        double num;
+        int total = 0;
         String result = "y";
         while (result.equals("y")) {
             numOfDigit = 1;
@@ -24,13 +26,24 @@ public class threePP07 {
             System.out.println("Ending Number: ");
             end = keyboard.nextInt();
             checkNum = start;
-            while (start >= end) {
-                while(checkNum/Math.pow(10,numOfDigit) < 10){
-                    numOfDigit +=1;
+            
+            while (start <= end) {
+                while (checkNum <= end){
+                    numOfDigit = 1; 
+                    num = checkNum/Math.pow(10,numOfDigit);
+                    while(num > 1){
+                      numOfDigit +=1;
+                      num = checkNum/Math.pow(10,numOfDigit);
+                    }
+                    System.out.println(num);
+                     
+                    for (int i = 0; i <= numOfDigit; i++){
+                        num = checkNum % Math.pow(10,i);
+                        total += num;
+                       
+                    }
+                    checkNum+=1;
                 }
-                int exponents;
-                if(num <= 3)
-               checkNum +=1;
                 
             }
             System.out.println("Would you like to repeat the program?(y/n)");
