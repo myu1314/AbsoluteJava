@@ -13,45 +13,47 @@ public class threePP07 {
     public static void main(String[] args) throws Exception {
         Scanner keyboard = new Scanner(System.in);
         int numOfDigit;
-        double checkNum;
-        int start;
-        int end;
-        double num;
+        int checkNum;
+        // int start;
+        int start = 0; // for testing
+        // int end;
+        int end = 500;
+        int num;
         int total = 0;
         String result = "y";
         while (result.equals("y")) {
-            numOfDigit = 1;
-            System.out.println("Starting Number: ");
-            start = keyboard.nextInt();
-            System.out.println("Ending Number: ");
-            end = keyboard.nextInt();
+            /*
+             * System.out.println("Starting Number: ");
+             * start = keyboard.nextInt();
+             * System.out.println("Ending Number: ");
+             * end = keyboard.nextInt();
+             */
             checkNum = start;
-            
-            while (start <= end) {
-                while (checkNum <= end){
-                    numOfDigit = 1; 
-                    num = checkNum/Math.pow(10,numOfDigit);
-                    while(num > 1){
-                      numOfDigit +=1;
-                      num = checkNum/Math.pow(10,numOfDigit);
-                    }
-                    System.out.println(num);
-                     
-                    for (int i = 0; i <= numOfDigit; i++){
-                        num = checkNum % Math.pow(10,i);
-                        total += num;
-                       
-                    }
-                    checkNum+=1;
+
+            while (checkNum <= end) {
+                total = 0;
+                numOfDigit = 1;
+                while (checkNum / Math.pow(10, numOfDigit) >= 1) {
+                    numOfDigit += 1;
+
                 }
-                
+                System.out.println("Num Of Digit: " + numOfDigit);
+                System.out.println("Check Num: " + checkNum);
+
+                for (int i = 1; i < numOfDigit; i++) {
+                    num = checkNum/((int)Math.pow(10, numOfDigit-i)) % (int)Math.pow(10, i);
+                    total += Math.pow(num, 3);
+                }
+                System.out.println(total);
+                checkNum += 1;
             }
+
             System.out.println("Would you like to repeat the program?(y/n)");
             keyboard.nextLine();
             result = keyboard.nextLine();
         }
         keyboard.close();
-        
+
     }
 
 }
