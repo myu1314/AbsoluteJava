@@ -12,7 +12,6 @@ public class threePP06 {
     public static void main(String[] args) throws Exception {
         Scanner keyboard = new Scanner(System.in);
         final double STARTING_CRUD = 10;
-        final double CRUD_GROWING_DAYS = 5;
         double currentCrud;
         double previousCrud;
         double daysOfSimulation= 0;
