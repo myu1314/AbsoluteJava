@@ -36,7 +36,7 @@ class Main {
               repeatTurn = 0;
             }
             else{
-              System.err.println("Would you like to hold? (h)");
+              System.out.println("Would you like to hold? (h)");
               if (holdString.equals("h")){
                 repeatTurn = 0;
                 player1Total += totalToAdd;
