@@ -29,18 +29,18 @@ class Main {
   }
 }
 //****************************OUTPUT**************************************
-// Phrase: 
-// 487692
-// $R%KM$
-// Would you like to repeat the program?(y/n)
-// y
-// Phrase:
-// 9492940
-// M@MEM@0
-// Would you like to repeat the program?(y/n)
-// y
-// Phrase:
-// 9009
-// $00$
-// Would you like to repeat the program?(y/n)
-// n
+// How many assingments were there? 
+// 3
+// Score recieved for exersise 1
+// 10
+// Total points possible for exersie 1
+// 10
+// Score recieved for exersise 2
+// 9
+// Total points possible for exersie 2
+// 10
+// Score recieved for exersise 3
+// 9
+// Total points possible for exersie 3
+// 10
+// You scored 28 out of 30 points, or % 93.33
