@@ -38,6 +38,8 @@ public class threePP07 {
                 for (int i = 1; i <= numOfDigit; i++) {
                     num = checkNum/((int)Math.pow(10, numOfDigit-i)) % (int)Math.pow(10, 1);
                     total += Math.pow(num, 3);
+                    System.out.println(checkNum);
+                    System.out.println("num:" + num);
                 }
                 if (total == checkNum){
                     System.out.println(total);
