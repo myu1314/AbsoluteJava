@@ -15,7 +15,6 @@ public class threePP08 {
         int phrase;
         String result;
         int numOfLetters;
-        int num;
         String repeatOffender = "y";
         int numToCheck;
         while (repeatOffender.equals("y")) {
