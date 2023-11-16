@@ -8,7 +8,7 @@
 
 import java.util.Scanner;
 
-class Main {
+public class threePP09 {
   public static void main(String[] args) {
     Scanner keyboard = new Scanner(System.in); 
     int totalPoints = 0;
