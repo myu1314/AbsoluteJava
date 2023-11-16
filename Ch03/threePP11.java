@@ -1,18 +1,16 @@
 /*
     Author: Mark Yu
     Last Updated: 11/16/2023
-    Description:  Pig
+    Description:  Random Constant Generator
   
   
 */
 
-import java.util.Scanner;
 import java.util.Random;
 
 public class threePP11 {
   public static void main(String[] args) {
     Random randomGenerator = new Random();
-    Scanner keyboard = new Scanner(System.in);
     int player1 = 0;
     int player2 = 0;
     int player3 = 0;
