@@ -107,18 +107,248 @@ public class threePP10 {
   }
 }
 // ****************************OUTPUT**************************************
-// How many assingments were there?
-// 3
-// Score recieved for exersise 1
-// 10
-// Total points possible for exersie 1
-// 10
-// Score recieved for exersise 2
-// 9
-// Total points possible for exersie 2
-// 10
-// Score recieved for exersise 3
-// 9
-// Total points possible for exersie 3
-// 10
-// You scored 28 out of 30 points, or % 93.33
+// Pig is a simple dice based two person game. If someone rolls a 1, they gain no points.
+// If they roll a 2-6 they have the option to hold, or to roll again. In the next round,
+// if a 1 is rolled, those points will also be lost. 
+// Current Score
+// Computer: 0
+// Player: 0
+// It is player one's turn. Please enter 'r' when you are ready to roll
+// r
+// You rolled a 4.
+// Would you like to hold? (h)
+// r
+// It is player one's turn. Please enter 'r' when you are ready to roll
+// r
+// You rolled a 4.
+// Would you like to hold? (h)
+// r
+// It is player one's turn. Please enter 'r' when you are ready to roll
+// r
+// You rolled a 4.
+// Would you like to hold? (h)
+// h
+// The computer rolls a 5
+// The computer chooses to roll again
+// The computer rolls a 4
+// The computer chooses to roll again
+// The computer rolls a 4
+// The computer chooses to roll again
+// The computer rolls a 1
+// Current Score
+// Player: 12
+// Computer: 0
+// It is player one's turn. Please enter 'r' when you are ready to roll
+// r
+// You rolled a 4.
+// Would you like to hold? (h)
+// r
+// It is player one's turn. Please enter 'r' when you are ready to roll
+// r
+// You rolled a 6.
+// Would you like to hold? (h)
+// r
+// It is player one's turn. Please enter 'r' when you are ready to roll
+// r
+// You rolled a 2.
+// Would you like to hold? (h)
+// h
+// The computer rolls a 4
+// The computer chooses to roll again
+// The computer rolls a 1
+// Current Score
+// Player: 24
+// Computer: 0
+// It is player one's turn. Please enter 'r' when you are ready to roll
+// r
+// You rolled a 2.
+// Would you like to hold? (h)
+// r
+// It is player one's turn. Please enter 'r' when you are ready to roll
+// r
+// You rolled a 1.
+// Since you rolled a one, you don't gain any points
+// The computer rolls a 5
+// The computer chooses to roll again
+// The computer rolls a 3
+// The computer chooses to roll again
+// The computer rolls a 4
+// The computer chooses to roll again
+// The computer rolls a 1
+// Current Score
+// Player: 24
+// Computer: 0
+// It is player one's turn. Please enter 'r' when you are ready to roll
+// r
+// You rolled a 6.
+// Would you like to hold? (h)
+// r
+// It is player one's turn. Please enter 'r' when you are ready to roll
+// r
+// You rolled a 1.
+// Since you rolled a one, you don't gain any points
+// The computer rolls a 4
+// The computer chooses to roll again
+// The computer rolls a 3
+// The computer chooses to roll again
+// The computer rolls a 5
+// The computer chooses to roll again
+// The computer rolls a 6
+// The computer chooses to roll again
+// The computer rolls a 3
+// The computer chooses to hold
+// Current Score
+// Player: 24
+// Computer: 21
+// It is player one's turn. Please enter 'r' when you are ready to roll
+// r
+// You rolled a 1.
+// Since you rolled a one, you don't gain any points
+// The computer rolls a 3
+// The computer chooses to roll again
+// The computer rolls a 6
+// The computer chooses to roll again
+// The computer rolls a 6
+// The computer chooses to roll again
+// The computer rolls a 3
+// The computer chooses to roll again
+// The computer rolls a 6
+// The computer chooses to hold
+// Current Score
+// Computer: 45
+// Player: 24
+// It is player one's turn. Please enter 'r' when you are ready to roll
+// r
+// You rolled a 3.
+// Would you like to hold? (h)
+// r
+// It is player one's turn. Please enter 'r' when you are ready to roll
+// r
+// You rolled a 5.
+// Would you like to hold? (h)
+// h
+// The computer rolls a 1
+// Current Score
+// Computer: 45
+// Player: 32
+// It is player one's turn. Please enter 'r' when you are ready to roll
+// r
+// You rolled a 5.
+// Would you like to hold? (h)
+// r
+// It is player one's turn. Please enter 'r' when you are ready to roll
+// r
+// You rolled a 4.
+// Would you like to hold? (h)
+// r
+// It is player one's turn. Please enter 'r' when you are ready to roll
+// r
+// You rolled a 5.
+// Would you like to hold? (h)
+// h
+// The computer rolls a 3
+// The computer chooses to roll again
+// The computer rolls a 1
+// Current Score
+// Player: 46
+// Computer: 45
+// It is player one's turn. Please enter 'r' when you are ready to roll
+// r
+// You rolled a 2.
+// Would you like to hold? (h)
+// r
+// It is player one's turn. Please enter 'r' when you are ready to roll
+// r
+// You rolled a 4.
+// Would you like to hold? (h)
+// r
+// It is player one's turn. Please enter 'r' when you are ready to roll
+// r
+// You rolled a 3.
+// Would you like to hold? (h)
+// h
+// The computer rolls a 3
+// The computer chooses to roll again
+// The computer rolls a 6
+// The computer chooses to roll again
+// The computer rolls a 6
+// The computer chooses to roll again
+// The computer rolls a 4
+// The computer chooses to roll again
+// The computer rolls a 6
+// The computer chooses to hold
+// Current Score
+// Computer: 70
+// Player: 55
+// It is player one's turn. Please enter 'r' when you are ready to roll
+// r
+// You rolled a 4.
+// Would you like to hold? (h)
+// r
+// It is player one's turn. Please enter 'r' when you are ready to roll
+// r
+// You rolled a 6.
+// Would you like to hold? (h)
+// r
+// It is player one's turn. Please enter 'r' when you are ready to roll
+// r
+// You rolled a 4.
+// Would you like to hold? (h)
+// r
+// It is player one's turn. Please enter 'r' when you are ready to roll
+// r
+// You rolled a 5.
+// Would you like to hold? (h)
+// h
+// The computer rolls a 1
+// Current Score
+// Player: 74
+// Computer: 70
+// It is player one's turn. Please enter 'r' when you are ready to roll
+// r
+// You rolled a 4.
+// Would you like to hold? (h)
+// r
+// It is player one's turn. Please enter 'r' when you are ready to roll
+// r
+// You rolled a 5.
+// Would you like to hold? (h)
+// r
+// It is player one's turn. Please enter 'r' when you are ready to roll
+// r
+// You rolled a 6.
+// Would you like to hold? (h)
+// h
+// The computer rolls a 2
+// The computer chooses to roll again
+// The computer rolls a 1
+// Current Score
+// Player: 89
+// Computer: 70
+// It is player one's turn. Please enter 'r' when you are ready to roll
+// r
+// You rolled a 5.
+// Would you like to hold? (h)
+// r
+// It is player one's turn. Please enter 'r' when you are ready to roll
+// r
+// You rolled a 3.
+// Would you like to hold? (h)
+// r
+// It is player one's turn. Please enter 'r' when you are ready to roll
+// r
+// You rolled a 5.
+// Would you like to hold? (h)
+// h
+// The computer rolls a 2
+// The computer chooses to roll again
+// The computer rolls a 6
+// The computer chooses to roll again
+// The computer rolls a 6
+// The computer chooses to roll again
+// The computer rolls a 2
+// The computer chooses to roll again
+// The computer rolls a 5
+// The computer chooses to hold
+// The player won by 11
+// Have a great day!
