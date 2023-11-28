@@ -1,6 +1,6 @@
 
 /*
-    Author: Mark Yu
+    Author: Mr. Simon
     Last Updated: 11/16/2023
     Description: Ideal Body Weight
   
@@ -23,7 +23,7 @@ public class threePP12MDSVersion {
     int nameweight = 0;
     Scanner fileIn = null;
     try {
-      fileIn = new Scanner(new FileInputStream("Ch03\\rsc\\ch3_PP12.txt"));
+      fileIn = new Scanner(new FileInputStream("Ch03\\rsc\\ch3_PP13.txt"));
       if (fileIn.hasNextLine()) {
         name = fileIn.nextLine();
         namefeet = fileIn.nextInt();
