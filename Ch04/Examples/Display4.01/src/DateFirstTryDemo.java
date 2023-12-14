@@ -3,6 +3,7 @@ public class DateFirstTryDemo {
         DateFirstTry date1, date2;
         date1 = new DateFirstTry();
         date2 = new DateFirstTry();
+
         date1.month = "December";
         date1.day = 31;
         date1.year = 2012;
@@ -14,5 +15,6 @@ public class DateFirstTryDemo {
         date2.year = 1776;
         System.out.println("date2:");
         date2.writeOutput();
+       
     }
 }
