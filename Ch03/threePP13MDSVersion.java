@@ -36,3 +36,13 @@ public class threePP13MDSVersion {
         System.out.printf("The longest palindrome is %s", longestPalindrome);
     }
 }
+// ****************************OUTPUT**************************************
+// a is a palindrome!
+// dad is a palindrome!
+// eye is a palindrome!
+// I is a palindrome!
+// level is a palindrome!
+// mom is a palindrome!
+// pop is a palindrome!
+// refer is a palindrome!
+// The longest palindrome is level

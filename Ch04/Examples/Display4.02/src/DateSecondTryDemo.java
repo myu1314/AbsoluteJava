@@ -1,8 +1,8 @@
-public class DateFirstTryDemo {
+public class DateSecondTryDemo {
     public static void main(String[] args) throws Exception {
-        DateFirstTry date1, date2;
-        date1 = new DateFirstTry();
-        date2 = new DateFirstTry();
+        DateSecondTry date1, date2;
+        date1 = new DateSecondry();
+        date2 = new DateSecondTry();
         date1.month = "December";
         date1.day = 31;
         date1.year = 2012;

@@ -1,4 +1,4 @@
-public class DateFirstTry {
+public class DateSecondTry {
     public String month;
     public int day;
     public int year;

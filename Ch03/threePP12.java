@@ -43,3 +43,7 @@ public class threePP12 {
     }
   }
 }
+// ****************************OUTPUT**************************************
+// Tom Atto should be 185lbs at 6 ft 3 inches
+// Eaton Wright should be 135lbs at 5 ft 5 inches
+// Cary Oki should be 165lbs at 5 ft 11 inches
