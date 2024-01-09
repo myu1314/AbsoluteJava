@@ -14,7 +14,7 @@ public class DateFirstTryDemo {
         date2.day = 4;
         date2.year = 1776;
         System.out.println("date2:");
-        date2.writeOutput();
+        date2.writeOutput(2);
        
     }
 }
