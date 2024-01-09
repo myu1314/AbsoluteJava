@@ -6,7 +6,7 @@ public class DateFirstTry
     
     public void writeOutput(){
         System.out.println(month + " " + day + ", " + year);
-        
+    }
     public void writeOutput(int f){
         System.out.printf("%s %d, %d",month,day,year);
     }
@@ -18,6 +18,6 @@ public class DateFirstTry
     public int getDay() {
         return day;
     }
-    }
+    
 
 }
