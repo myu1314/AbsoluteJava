@@ -1,20 +1,13 @@
-public class printCodeword {
-    public static void main(String[] args) throws Exception {
-        DateFirstTry date1, date2;
-        date1 = new DateFirstTry();
-        date2 = new DateFirstTry();
+package Ch04.Projects.fourPP01;
 
-        date1.month = "December";
-        date1.day = 31;
-        date1.year = 2012;
-        System.out.println("date1:");
-        date1.writeOutput();
-
-        date2.month = "July";
-        date2.day = 4;
-        date2.year = 1776;
-        System.out.println("date2:");
-        date2.writeOutput();
-       
+public class PrintCodeword {
+    public String month;
+    public int day;
+    public int year;
+    
+    public void writeOutput(){
+        String alphabet[] = {"A","B","C","D","E","F","G","H","I","J","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"};
+        
     }
 }
+
