@@ -11,7 +11,7 @@ public class fourPP03 {
         car.getFuelInTank();
         car.getInitEfficeny();
         System.out.println("Init Efficeny: " + car.getInitEfficeny());
-        System.out.println("FuelInTank: " + car.fuelInTank());
+        System.out.println("FuelInTank: " + car.getFuelInTank());
         System.out.println("Tank Size: " + car.getTankSize());
         
        
