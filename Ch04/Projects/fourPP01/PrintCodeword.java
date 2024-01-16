@@ -15,11 +15,11 @@ public class PrintCodeword {
             }
 
         }
-        for (int i = 0; i <= 26; i++){
+        for (int i = 0; i <= 25; i++){
             if (valuePrintOut == 10){
                 valuePrintOut = 0;
            }
-           if (alphabet[i+startinLetterPos] == "Z"){
+           if ((i+startinLetterPos) == 26){
                 alphabetCounter = -startinLetterPos;
            }
            System.out.println(alphabet[alphabetCounter+startinLetterPos] + (valuePrintOut));  
