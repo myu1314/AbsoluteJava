@@ -2,7 +2,7 @@ package Ch04.Projects.fourPP01;
 
 public class fourPP01 {
     public static void main(String[] args) throws Exception {
-        PrintCodeword date1, date2;
+        PrintCodeword date1;
         date1 = new PrintCodeword();
 
         date1.startingLetter = "D";
