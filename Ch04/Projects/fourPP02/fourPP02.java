@@ -8,7 +8,7 @@ public class fourPP02 {
         date1.setBirthdayDate("Janurary", 20, 2000);
         date1.setCurrentDate("Janurary", 1, 2020);
         date1.findBirthdayDifferenceExact();
-        
+        date1.findBirthdayDifferenceDecimal();
        
     }
 }

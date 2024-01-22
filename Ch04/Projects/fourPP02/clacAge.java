@@ -21,9 +21,9 @@ public class clacAge {
     }
 
     public void findBirthdayDifferenceExact() {
-        int differenceInDays;
-        int differenceInMonths;
-        int differenceInYears;
+        double differenceInDays;
+        double differenceInMonths;
+        double differenceInYears;
         int monthNumBirth = findMonth(birthdayMonth);
         int monthNumCurrent = findMonth(currentMonth);
         differenceInDays = currentDay - birthdayDay;
@@ -50,7 +50,7 @@ public class clacAge {
     public void findBirthdayDifferenceDecimal (){
         double yearsInDifference = 0;
         int differenceInDays;
-        int differenceInMonths;
+        double differenceInMonths;
         int differenceInYears;
         int monthNumBirth = findMonth(birthdayMonth);
         int monthNumCurrent = findMonth(currentMonth);
@@ -73,10 +73,9 @@ public class clacAge {
             differenceInMonths += 12;
             differenceInYears -= 1;
         }
-        differenceInDays = differenceInDays * 1/365;
-        differenceInMonths = differenceInMonths * 1/12;
-        yearsInDifference = differenceInDays + differenceInMonths + differenceInYears;
+        yearsInDifference = differenceInDays * 1/365+ differenceInMonths * 1/12 + differenceInYears;
         System.out.println("The Difference is " + yearsInDifference + " years.");
+
     }
 
     public boolean check(String month, int day, int year) {

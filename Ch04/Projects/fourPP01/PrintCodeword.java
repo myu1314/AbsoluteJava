@@ -3,6 +3,7 @@ package Ch04.Projects.fourPP01;
 public class PrintCodeword {
     public String startingLetter;
     public int numberValue;
+    private final int RESSSETING_VALKUE = 10;
     
     public void writeOutput(){
         String alphabet[] = {"A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"};
@@ -15,8 +16,8 @@ public class PrintCodeword {
             }
 
         }
-        for (int i = 0; i <= 25; i++){
-            if (valuePrintOut == 10){
+        for (int i = 0; i < alphabet.length; i++){
+            if (valuePrintOut == RESSSETING_VALKUE){
                 valuePrintOut = 0;
            }
            if ((i+startinLetterPos) == 26){
