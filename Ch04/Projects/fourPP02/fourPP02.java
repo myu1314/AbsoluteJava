@@ -9,6 +9,6 @@ public class fourPP02 {
         date1.setCurrentDate("Janurary", 1, 2020);
         date1.findBirthdayDifferenceExact();
         date1.findBirthdayDifferenceDecimal();
-       
+       //if "9 years, 9 months, 10 days " != date1.findBirthdayDifferenceExact();
     }
 }

@@ -1,14 +1,14 @@
-package Ch04.Projects.fourPP03;
+package Ch04.Projects.fourPP04;
 
 import java.util.Scanner;
 
-public class Vehicle {  
-    private int tankSize;
-    private int fuelInTank = 0;
-    private int initEfficeny;
+public class Journal {  
+    private String author;
+    private String title;
+    private int date;
 
-    public Vehicle() {
-        this(100, 20, 1);
+    public Journal() {
+        this("", 20, 1);
     }
 
     public Vehicle(int tankSize,
