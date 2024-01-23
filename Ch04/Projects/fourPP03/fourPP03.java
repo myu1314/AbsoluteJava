@@ -6,7 +6,7 @@ public class fourPP03 {
         car = new Vehicle();
 
         car.setVariables(100, 0, 20);
-        car.distanceLeft();
+        car.driveTo();
         car.addPetrol();
         car.getFuelInTank();
         car.getInitEfficeny();

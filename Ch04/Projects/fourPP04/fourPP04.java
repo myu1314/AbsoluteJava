@@ -1,19 +1,18 @@
-package Ch04.Projects.fourPP03;
+package Ch04.Projects.fourPP04;
 
 public class fourPP04 {
     public static void main(String[] args) throws Exception {
-        Vehicle car;
-        car = new Vehicle();
-
-        car.setVariables(100, 0, 20);
-        car.distanceLeft();
-        car.addPetrol();
-        car.getFuelInTank();
-        car.getInitEfficeny();
-        System.out.println("Init Efficeny: " + car.getInitEfficeny());
-        System.out.println("FuelInTank: " + car.getFuelInTank());
-        System.out.println("Tank Size: " + car.getTankSize());
         
+        Journal journal1;
+        DateFirstTry date;
+        date = new DateFirstTry();
+        date.month = "December";
+        date.day = 31;
+        date.year = 2012;
+
+        journal1 = new Journal("Shakespeare", "Macbeth", date);
+        journal1.displayDetails();
+        System.out.println(journal1.getSubmissionPaper());
        
     }
 }

@@ -1,64 +1,45 @@
 package Ch04.Projects.fourPP04;
 
+import java.sql.Date;
 import java.util.Scanner;
 
 public class Journal {  
     private String author;
     private String title;
-    private int date;
+    private DateFirstTry date;
 
-    public Journal() {
-        this("", 20, 1);
-    }
-
-    public Vehicle(int tankSize,
-            int fuelInTank,
-            int initEfficeny) {
-        setVariables(tankSize, fuelInTank, initEfficeny);
+    public Journal(String author,
+            String title,
+            DateFirstTry date) {
+        setVariables(author, title, date);
 
     }
 
-    public void setVariables(int tankSize, int fuelInTank, int initEfficeny) {
-        setTankSize(tankSize);
-        // if (tankSize < 0) {
-        //     System.out.println("The tankSize is set to negative number. It has been switched to postive. ");
-        //     tankSize *= -1;
-        // }
-        // tankSize = tankSize;
-        fuelInTank = fuelInTank;
-        initEfficeny = initEfficeny;
+    public void setVariables(String author1, String title1, DateFirstTry date) {
+        setDate(date);
+        author = author1;
+        title = title1;
     }
-    private void setTankSize(int tankSize) {
-        // if 
-        this.tankSize = tankSize;
+    private void setDate(DateFirstTry date) {
+        this.date = date;
     }
 
-    public void setFuelInTank(int fuelInTank) {
-        // if check if the value is good, if not do something
-        this.fuelInTank = fuelInTank;
+
+    public String getSubmissionPaper() {
+        String word;
+        String result = "";
+        String[] array = title.split(" ");
+        for (String wordToChange: array){
+            word = (wordToChange.substring(0, 1)).toUpperCase() + (wordToChange.substring(1, wordToChange.length()));
+            result += word;
+            result += " ";
+        }
+        return result;
+
     }
 
-    public int getTankSize() {
-        return tankSize;
+    public void displayDetails() {
+        System.out.println("The date "  + title + " was published was");
+        date.writeOutput();
     }
-
-    public int getFuelInTank() {
-        return fuelInTank;
-    }
-
-    public int getInitEfficeny() {
-        return initEfficeny;
-    }
-
-    public void addPetrol() {
-        int addPetrol = tankSize - fuelInTank;
-        System.out.println("Adding " + addPetrol + " gallons of petrol");
-        fuelInTank = tankSize;
-    }
-
-    public int driveTo() {
-        int distance = fuelInTank * initEfficeny;
-        return distance;
-    }
-
 }
