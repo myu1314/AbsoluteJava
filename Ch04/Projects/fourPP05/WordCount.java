@@ -1,6 +1,5 @@
 package Ch04.Projects.fourPP05;
 
-import java.sql.Date;
 import java.util.Scanner;
 
 public class WordCount {  
