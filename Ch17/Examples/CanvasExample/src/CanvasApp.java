@@ -10,7 +10,8 @@ public class CanvasApp  extends JFrame{
             public void paint(Graphics g){
                 g.setColor(Color.red);
                 g.setFont(new Font("Bold", 1, 20));
-                g.drawString("This is a canvas", 100, 100);
+                //g.drawString("This is a canvas", 100, 100);
+                g.drawArc(100, 100, 50, 150, 10, 100);
                 }
         };
 
