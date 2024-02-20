@@ -85,36 +85,35 @@ public class Date{
     public int getMonth(String month) {
         int monthNum = 0;
         if (month.equals("January") ) {
-            monthNum = 1;
+            return 1;
         } else if (month.equals("February")) {
-            monthNum = 2;
+            return 2;
         } else if (month.equals("March")) {
-            monthNum = 3;
+            return 3;
         } else if (month.equals("April")) {
-            monthNum = 4;
+            return 4;
         } else if (month.equals("May")) {
-            monthNum = 5;
+            return 5;
         } else if (month.equals("June")) {
-            monthNum = 6;
+            return 6;
         } else if (month.equals("July")) {
-            monthNum = 7;
+            return 7;
         } else if (month.equals("August")) {
-            monthNum = 8;
+            return 8;
         } else if (month.equals("September")) {
-            monthNum = 9;
+            return 9;
         } else if (month.equals("October")) {
-            monthNum = 10;
+            return 10;
         } else if (month.equals("Novemember")) {
-            monthNum = 11;
+            return 11;
         } else if (month.equals("Decemeber")) {
-            monthNum = 12;
+            return 12;
         }
         else{
             System.out.println("Fatal Error");
             System.exit(0);
-            monthNum =  0;
+            return 0;
         }
-        return monthNum;
     }
     public int getDay(){
         return day;
@@ -129,7 +128,7 @@ public class Date{
         return (month.equals(otherDate.month) && (day == otherDate.day) && (month == otherDate.month));
     }
     public Boolean precedes(Date otherDate){
-        return ( (year < otherDate.year) || (year == otherDate.year && getMonth() < otherDate.getMonth()) ||(year == otherDate.year && month.equals(otherDate.month)&& day < otherDate.day) );
+        return ( (year < otherDate.year) || (year == otherDate.year && getMonth() < otherDate.getMonth()) || (year == otherDate.year && month.equals(otherDate.month) && day < otherDate.day) );
     }
     public void readInput(){
         boolean tryAgain = true;
