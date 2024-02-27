@@ -1,7 +1,5 @@
-/**
- * 2 Class for basic pet records: name, age, and weight.
- * 3
- */
+package Ch04.Projects.fourPP10;
+
 public class Pet {
     private String name;
     private int age; // in years

@@ -1,9 +1,4 @@
 
-
-/**
- * 2 Class for basic pet records: name, age, and weight.
- * 3
- */
 public class Pizza {
     private String size;
     private int numberOfCheeseToppings;
@@ -79,7 +74,7 @@ public class Pizza {
         return numberOfHamToppings;
     }
 
-   public int calcPizzaClass(){
+   public int calcPizzaCost(){
     if(size == "small"){
         return (10 + 2 * (numberOfCheeseToppings+numberOfHamToppings + numberOfPeperoniToppings));
     }
@@ -94,7 +89,7 @@ public class Pizza {
     }
    }
    public String getDetails(){
-    int cost = calcPizzaClass();
+    int cost = calcPizzaCost();
     return ("Cost: $" + cost + "\n" + "Number Of Cheese Tooppings: " +numberOfCheeseToppings + "\nNumber Of Pepperoni Tooppings: " +numberOfPeperoniToppings +"\nNumber Of Ham Tooppings: " +numberOfHamToppings);
    }
 
