@@ -1,32 +1,34 @@
 /**
- * Class for basic pet records: name, age, and weight.
+ * 2 Class for basic pet records: name, age, and weight.
+ * 3
  */
+public class Pet {
+    private String name;
+    private int age; // in years
+    private double weight; // in pounds
+    private String typeOfPet; // cat or dog
 
-public class Pet{
-
-    private String speciesName;
-    private double population;
-    private double growthRate;
-
-    public Pet()
-    {
-        speciesName = "homosapien";
-        population = 1000;
-        growthRate = 1.1; 
+    public String toString() {
+        return ("Name: " + name + " Age: " + age + " years"
+                + "\nWeight: " + weight + " pounds" + "Species: " + typeOfPet + ".");
     }
-    public Pet(String spiecesNameChange, double populationChange, double growthRateChange) {
-        setSpeciesName(spiecesNameChange);
-        setPopulation(populationChange);
-        setGrowthRate(growthRateChange);
 
+    public Pet(String initialName, int initialAge,
+            double initialWeight, String initalTypeOfPet) {
+        name = initialName;
+        typeOfPet = initalTypeOfPet;
+        if ((initialAge < 0) || (initialWeight < 0)) {
+            System.out.println("Error: Negative age or weight.");
+            System.exit(0);
+        } else {
+            age = initialAge;
+            weight = initialWeight;
+        }
     }
-    public String toString(){
-        return (speciesName + ' ' + population + + ' ' + growthRate);
-    }
-    public boolean equals(Pet
 
-    public void set(String newName, int newAge, double newWeight) {
+    public void set(String newName, int newAge, double newWeight,String initalTypeOfPet) {
         name = newName;
+        typeOfPet = initalTypeOfPet;
         if ((newAge < 0) || (newWeight < 0)) {
             System.out.println("Error: Negative age or weight.");
             System.exit(0);
@@ -96,5 +98,29 @@ public class Pet{
         return age;
     }
 
-    public double getWeight()123{124 return weight;125
+    public double getWeight() {
+        return weight;
+    }
+
+    public double acepromazine(){
+        if (typeOfPet.equals("cat")){
+            return (weight/2.2 * 0.002/10);
+        }if (typeOfPet.equals("dog")){
+            return (weight/2.2 * 0.03/10);
+        }
+        else{
+            return 0;
+        }
+    }
+    public double carprofen(){
+        if (typeOfPet.equals("cat")){
+            return (weight/2.2 * 0.25/12);
+        }if (typeOfPet.equals("dog")){
+            return (weight/2.2 * 0.5/12);
+        }
+        else{
+            return 0;
+        }
+    }
+
 }
