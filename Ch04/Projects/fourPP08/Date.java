@@ -82,38 +82,39 @@ public class Date{
             this.day = day;
         }
     }
-    public int getMonth(String month) {
+    public int getMonth() {
         int monthNum = 0;
         if (month.equals("January") ) {
-            return 1;
+            monthNum = 1;
         } else if (month.equals("February")) {
-            return 2;
+            monthNum = 2;
         } else if (month.equals("March")) {
-            return 3;
+            monthNum = 3;
         } else if (month.equals("April")) {
-            return 4;
+            monthNum = 4;
         } else if (month.equals("May")) {
-            return 5;
+            monthNum = 5;
         } else if (month.equals("June")) {
-            return 6;
+            monthNum = 6;
         } else if (month.equals("July")) {
-            return 7;
+            monthNum = 7;
         } else if (month.equals("August")) {
-            return 8;
+            monthNum = 8;
         } else if (month.equals("September")) {
-            return 9;
+            monthNum = 9;
         } else if (month.equals("October")) {
-            return 10;
+            monthNum = 10;
         } else if (month.equals("Novemember")) {
-            return 11;
+            monthNum = 11;
         } else if (month.equals("Decemeber")) {
-            return 12;
+            monthNum = 12;
         }
         else{
             System.out.println("Fatal Error");
             System.exit(0);
-            return 0;
+            monthNum =  0;
         }
+        return monthNum;
     }
     public int getDay(){
         return day;
@@ -128,7 +129,7 @@ public class Date{
         return (month.equals(otherDate.month) && (day == otherDate.day) && (month == otherDate.month));
     }
     public Boolean precedes(Date otherDate){
-        return ( (year < otherDate.year) || (year == otherDate.year && getMonth() < otherDate.getMonth()) || (year == otherDate.year && month.equals(otherDate.month) && day < otherDate.day) );
+        return ( (year < otherDate.year) || (year == otherDate.year && getMonth() < otherDate.getMonth()) ||(year == otherDate.year && month.equals(otherDate.month)&& day < otherDate.day) );
     }
     public void readInput(){
         boolean tryAgain = true;
@@ -151,12 +152,13 @@ public class Date{
     private boolean dateOK(int monthInt, int dayInt, int yearInt){
         return((monthInt >= 1) && (monthInt <= 12) && (dayInt >= 1) && (dayInt <= 31) && (yearInt >= 1000) && (yearInt <= 9999) );
     }
-    private boolean dateOK(String monthString, int dayInt, int yearInt){
-        return ( monthOK(monthString) && (dayInt >= 1) && (dayInt <= 31) && (yearInt >= 1000) && (yearInt <= 9999) )
-    }
     private boolean monthOk(String month){
         return ( month.equals("January") || month.equals("February") ||month.equals("March") || month.equals("April") ||month.equals("May") || month.equals("June") ||month.equals("July") || month.equals("August") ||month.equals("September") || month.equals("October") ||month.equals("November") || month.equals("December") );
     }
+    private boolean dateOK(String monthString, int dayInt, int yearInt){
+        return ( monthOK(monthString) && (dayInt >= 1) && (dayInt <= 31) && (yearInt >= 1000) && (yearInt <= 9999) );
+    }
+    
     private String monthString (int monthNumber){
         switch (monthNumber){
             case 1:
