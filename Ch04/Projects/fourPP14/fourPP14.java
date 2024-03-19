@@ -6,11 +6,6 @@ import java.util.StringTokenizer;
 public class fourPP14 {
     public static void main(String[] args) throws Exception {
         Scanner fileIn = null;
-        String product1Name;
-        String product2Name;
-        String product3Name;
-        String product4Name;
-        String product5Name;
         double product1Average = 0;
         double product2Average = 0;
         double product3Average = 0;
@@ -35,14 +30,10 @@ public class fourPP14 {
 
             }
 
-            fileIn = new Scanner(new FileInputStream("Ch04\\rsc\\ch4_PP14.csv"));
+            fileIn = new Scanner(new FileInputStream("Ch04\\rsc\\ch4_PP15.csv"));
             line = fileIn.nextLine();
             StringTokenizer wordFactory = new StringTokenizer(line, deliminters);
-            product1Name = wordFactory.nextToken();
-            product2Name = wordFactory.nextToken();
-            product3Name = wordFactory.nextToken();
-            product4Name = wordFactory.nextToken();
-            product5Name = wordFactory.nextToken();
+            
             for (int i = 0; i < numberOfReviews; i++) {
                 line = fileIn.nextLine();
                 wordFactory = new StringTokenizer(line, deliminters);
@@ -84,11 +75,11 @@ public class fourPP14 {
             product3Average = product3Average / product3NOR;
             product4Average = product4Average / product4NOR;
             product5Average = product5Average / product5NOR;
-            System.out.println("The average for " + product1Name + " is " + product1Average);
-            System.out.println("The average for " + product2Name + " is " + product2Average);
-            System.out.println("The average for " + product3Name + " is " + product3Average);
-            System.out.println("The average for " + product4Name + " is " + product4Average);
-            System.out.println("The average for " + product5Name + " is " + product5Average);
+            System.out.println("The average for A is " + product1Average);
+            System.out.println("The average for B is " + product2Average);
+            System.out.println("The average for C is " + product3Average);
+            System.out.println("The average for D is " + product4Average);
+            System.out.println("The average for E is " + product5Average);
 
         } catch (FileNotFoundException e) {
             System.out.println("File Not Found");
@@ -97,7 +88,6 @@ public class fourPP14 {
     }
 
     static double convertNumber(String number) {
-        System.out.println(number);
         double numToReturn = 0;
         if (number.equals("1")) {
             numToReturn = 1;
