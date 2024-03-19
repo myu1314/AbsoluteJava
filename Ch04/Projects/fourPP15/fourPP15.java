@@ -57,24 +57,26 @@ public class fourPP15 {
                 wordFactory = new StringTokenizer(line, deliminters);
                 //Seperating Each Line
                 numberToCheck = convertNumber(wordFactory.nextToken());
-                product1Num += numberToCheck;
+                product1Num = numberToCheck;
                 //Seperating Each Line      
                 numberToCheck = convertNumber(wordFactory.nextToken());
-                product2Num += numberToCheck;
+                product2Num = numberToCheck;
                 //Seperating Each Line
                 numberToCheck = convertNumber(wordFactory.nextToken());
-                product3Num += numberToCheck;
+                product3Num = numberToCheck;
                 //Seperating Each Line
                 numberToCheck = convertNumber(wordFactory.nextToken());
-                product4Num += numberToCheck;
+                product4Num = numberToCheck;
                 //Seperating Each Line
-                numberToCheck=  returnAverage(product1Num, product2Num, product3Num,product4Num, c1r, c2r, c3r, c4r);
-                System.out.println("Line has been reached");
-                if  (numberToCheck < min){
+                double checker=  returnAverage(product1Num, product2Num, product3Num,product4Num, c1r, c2r, c3r, c4r);
+               
+                double holding = convertNumber(wordFactory.nextToken());
+                if  (checker < min){
                     min = numberToCheck;
-                    finalRating = convertNumber(wordFactory.nextToken());
+                    finalRating = holding;
+                    
                 }
-                System.out.println(finalRating);
+                
             }
            
             
@@ -107,6 +109,7 @@ public class fourPP15 {
     }
     static double returnAverage(double r1,double r2,double r3,double r4,double c1r,double c2r,double c3r,double c4r){
         double similiarty = Math.abs(r1 - c1r) + Math.abs(r2 - c2r) + Math.abs(r3 - c3r) + Math.abs(r4 - c4r);
+        
         return similiarty;
 
     }
