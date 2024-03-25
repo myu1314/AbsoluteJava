@@ -12,12 +12,6 @@ public class fourPP15 {
         double product2Num = 0;
         double product3Num = 0;
         double product4Num = 0;
-        double product5Num = 0;
-        double product1NOR = 0;
-        double product2NOR = 0;
-        double product3NOR = 0;
-        double product4NOR = 0;
-        double product5NOR = 0;
         double numberOfReviews = 0;
         double finalRating = 0;
         int checkingMin = 0;
@@ -46,13 +40,11 @@ public class fourPP15 {
                 fileIn.nextLine();
 
             }
-            System.out.println("Number Of Reviews" + numberOfReviews);
             fileIn = new Scanner(new FileInputStream("Ch04\\rsc\\ch4_PP15.csv"));
             line = fileIn.nextLine();
             StringTokenizer wordFactory = new StringTokenizer(line, deliminters);
             
             for (int i = 0; i < numberOfReviews; i++) {
-                System.out.println(i + " times repeated");
                 line = fileIn.nextLine();
                 wordFactory = new StringTokenizer(line, deliminters);
                 //Seperating Each Line
@@ -78,7 +70,7 @@ public class fourPP15 {
                 }
                 
             }
-           
+            System.out.println("Is your final rating? " + finalRating);
             
 
         } catch (FileNotFoundException e) {
