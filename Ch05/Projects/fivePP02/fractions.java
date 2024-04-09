@@ -23,26 +23,15 @@ public class fractions{
         return (numerator + "/" + denominator);
     }
     public boolean equals(fractions fraction2){
-        int gcd = gcd(numerator, denominator);
-        int rNum = numerator/gcd;
-        int rDenom = denominator/gcd;
-
-        gcd = gcd(fraction2.numerator, fraction2.denominator);
-        int otherRNum = fraction2.numerator/gcd;
-        int otherRDenom = fraction2.denominator/gcd;
-
-        return ((rNum == otherRNum) && (rDenom == otherRDenom));
-    }
-    public int gcd(int num, int denom){
-        boolean found = false;
-        int tryingNum = 0;
-        while (found){
-            if ((num % tryingNum != 0) && (denom % tryingNum != 0)){
-                tryingNum += 1;
-            }
-            
-        } 
-        return tryingNum;
+        Boolean isEqual = false;
+        double other1 = (fraction2.numerator/fraction2.denominator);
+        double current = (numerator/denominator);
+        if (other1 == current){
+            isEqual = true;
+        }
+        System.out.println("does it work");
+        return isEqual;
+        
     }
 }
 

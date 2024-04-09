@@ -10,7 +10,7 @@ public class fivePP02 {
         while(true){
             System.out.println("Enter another fraction to compare:");
             String userI = keyboard.next();
-            if (userI,equals( "quit")){
+            if (userI.equals( "quit")){
                 break;
             }
             int otherNumerator = keyboard.nextInt();
