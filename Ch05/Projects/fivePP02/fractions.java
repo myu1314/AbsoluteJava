@@ -23,7 +23,15 @@ public class fractions{
         return (numerator + "/" + denominator);
     }
     public boolean equals(fractions fraction2){
-        while (fraction2)
+        int gcd = gcd(numerator, denominator);
+        int rNum = numerator/gcd;
+        int rDenom = denominator/gcd;
+
+        gcd = gcd(fraction2.numerator, fraction2.denominator);
+        int otherRNum = fraction2.numerator/gcd;
+        int otherRDenom = fraction2.denominator/gcd;
+
+        return ((rNum == otherRNum) && (rDenom == otherRDenom));
     }
     public int gcd(int num, int denom){
         boolean found = false;
@@ -36,24 +44,5 @@ public class fractions{
         } 
         return tryingNum;
     }
-
-    
-    
-    public void trackSalesStatus() {
-        System.out.println("Total Number of Book's Sold:" + totalBooksSold + ".");
-    }
-    public void displayQuantityAvailable() {
-        System.out.println("Quantity available for Book " + storeId + " is " + quantity + ".");
-    }
-    public void sellBook(int sellingQuantity) {
-        if (quantity >= sellingQuantity){
-            totalBooksSold  += sellingQuantity;
-            quantity = quantity - sellingQuantity;
-        }
-        else{
-            System.out.println("Not enough books");
-        }
-    }
-    
 }
 
