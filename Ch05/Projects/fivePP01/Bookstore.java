@@ -1,33 +1,40 @@
 package Ch05.Projects.fivePP01;
 
-public class PrintCodeword {
-    public String startingLetter;
-    public int numberValue;
-    private final int RESSSETING_VALKUE = 10;
-    
-    public void writeOutput(){
-        String alphabet[] = {"A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"};
-        int startinLetterPos = 0;
-        int valuePrintOut = numberValue;
-        int alphabetCounter = 0; 
-        for (int i = 0; i<=25; i++){
-            if (alphabet[i] == startingLetter ){
-                startinLetterPos = i;
-            }
-
-        }
-        for (int i = 0; i < alphabet.length; i++){
-            if (valuePrintOut == RESSSETING_VALKUE){
-                valuePrintOut = 0;
-           }
-           if ((i+startinLetterPos) == 26){
-                alphabetCounter = -startinLetterPos;
-           }
-           System.out.println(alphabet[alphabetCounter+startinLetterPos] + (valuePrintOut));  
-           valuePrintOut += 1;
-           alphabetCounter += 1;  
-        }
-        
+public class bookStore{
+    private String storeId;
+    public String category;
+    public String author;
+    public String title;
+    public String publisher;
+    public double sellingPrice;
+    public int quantity;
+    private static int totalBooksSold = 0;
+    public bookStore(String inStoreId, String inCategory, String inAuthor, String inTitle, String inPublisher, double inSellingPrice, int inQuantity){
+        storeId = inStoreId;
+        category = inCategory;
+        author = inAuthor;
+        title = inTitle;
+        author = inAuthor;
+        publisher = inPublisher;
+        sellingPrice = inSellingPrice;
+        quantity = inQuantity;
     }
+    
+    public void trackSalesStatus() {
+        System.out.println("Total Number of Book's Sold:" + totalBooksSold + ".");
+    }
+    public void displayQuantityAvailable() {
+        System.out.println("Quantity available for Book " + storeId + " is " + quantity + ".");
+    }
+    public void sellBook(int sellingQuantity) {
+        if (quantity >= sellingQuantity){
+            totalBooksSold  += sellingQuantity;
+            quantity = quantity - sellingQuantity;
+        }
+        else{
+            System.out.println("Not enough books");
+        }
+    }
+    
 }
 
