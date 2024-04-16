@@ -1,10 +1,10 @@
-package Ch05.Projects.fivePP02;
+package Ch05.Projects.fivePP03;
 
-public class Container{
+public class container{
     public double mxCapcity;
-    public doubl equantity;
-    public Conatiner(double mxCapcityInp){
-        maxCapcity = mxCapcityInp;
+    public double quantity;
+    public container(double mxCapcityInp){
+        mxCapcity = mxCapcityInp;
         quantity = 0;
     }
     public double getQuantity(){
@@ -20,17 +20,17 @@ public class Container{
     public void empty(){
         quantity = 0;
     }
-    public void transfter(container container1, double transferNum){
+    public void transfer(container container1, double transferNum){
         double aSpace = container1.getLeft();
         double transferAmount = 0;
         if (transferNum <= 0){
             System.out.println("Transfer amount must be positive");
             return; 
         }
-        if (quantity < amount){
+        if (quantity < transferNum){
             System.out.println("Not enough in current container");
         }
-        if (aSpace = 0){
+        if (aSpace == 0){
             System.out.println("Transfer Container has no more space");
         }
         if(transferNum <= aSpace){
