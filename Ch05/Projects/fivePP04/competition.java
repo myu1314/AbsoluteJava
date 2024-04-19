@@ -1,12 +1,12 @@
 package Ch05.Projects.fivePP04;
 
-public class competition{
+public class Competition{
     public String name;
     public String winningteam;
     public String secondPlace;
     public int year;
     
-    public competition(String intName, String intWinningteam, String intSecondPlace, int intYear){
+    public Competition(String intName, String intWinningteam, String intSecondPlace, int intYear){
         name = intName;
         winningteam = intWinningteam;
         secondPlace = intSecondPlace;

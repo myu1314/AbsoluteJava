@@ -1,9 +1,9 @@
 package Ch05.Projects.fivePP03;
 
-public class container{
+public class Container{
     public double mxCapcity;
     public double quantity;
-    public container(double mxCapcityInp){
+    public Container(double mxCapcityInp){
         mxCapcity = mxCapcityInp;
         quantity = 0;
     }
@@ -20,7 +20,7 @@ public class container{
     public void empty(){
         quantity = 0;
     }
-    public void transfer(container container1, double transferNum){
+    public void transfer(Container container1, double transferNum){
         double aSpace = container1.getLeft();
         double transferAmount = 0;
         if (transferNum <= 0){

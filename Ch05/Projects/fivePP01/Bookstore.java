@@ -1,6 +1,6 @@
 package Ch05.Projects.fivePP01;
 
-public class bookStore{
+public class BookStore{
     private String storeId;
     public String category;
     public String author;
@@ -9,7 +9,7 @@ public class bookStore{
     public double sellingPrice;
     public int quantity;
     private static int totalBooksSold = 0;
-    public bookStore(String inStoreId, String inCategory, String inAuthor, String inTitle, String inPublisher, double inSellingPrice, int inQuantity){
+    public BookStore(String inStoreId, String inCategory, String inAuthor, String inTitle, String inPublisher, double inSellingPrice, int inQuantity){
         storeId = inStoreId;
         category = inCategory;
         author = inAuthor;

@@ -1,10 +1,10 @@
 package Ch05.Projects.fivePP02;
 
-public class fractions{
+public class Fractions{
     public int numerator;
     public int denominator;
     private static int totalBooksSold = 0;
-    public fractions(int inNumerator,int inDenominator){
+    public Fractions(int inNumerator,int inDenominator){
         numerator = inNumerator;
         if (inDenominator > 0){
             denominator = inDenominator;
@@ -22,7 +22,7 @@ public class fractions{
     public String displayFraction(){
         return (numerator + "/" + denominator);
     }
-    public boolean equals(fractions fraction2){
+    public boolean equals(Fractions fraction2){
         Boolean isEqual = false;
         double other1 = (fraction2.numerator/fraction2.denominator);
         double current = (numerator/denominator);
