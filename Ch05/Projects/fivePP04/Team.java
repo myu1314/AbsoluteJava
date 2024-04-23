@@ -6,10 +6,10 @@ public class Team{
     public String name2;
     public String name3;
     public String name4;
-    public competition competiton1;
-    public competition competition2;
+    public Competition competiton1;
+    public Competition competition2;
     public Team(String intNameTeam, String intName1, String intName2, String intName3, String intName4,
-                competition intCompetition1, competition intCompetition2) {
+                Competition intCompetition1, Competition intCompetition2) {
         nameTeam = intNameTeam;
         name1 = intName1;
         name2 = intName2;
@@ -38,11 +38,11 @@ public class Team{
         return name4;
     }
 
-    public competition getCompetition1() {
+    public Competition getCompetition1() {
         return competiton1;
     }
 
-    public competition getCompetition2() {
+    public Competition getCompetition2() {
         return competition2;
     }
     public void displayTeam() {

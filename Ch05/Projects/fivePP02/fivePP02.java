@@ -6,7 +6,7 @@ public class fivePP02 {
         System.out.println("Enter a fraction:");
         int numerator = keyboard.nextInt();
         int denominator = keyboard.nextInt(); 
-        fractions fraction1 = new fractions (numerator, denominator);
+        Fractions fraction1 = new Fractions (numerator, denominator);
         while(true){
             System.out.println("Enter another fraction to compare:");
             String userI = keyboard.next();
@@ -15,7 +15,7 @@ public class fivePP02 {
             }
             int otherNumerator = keyboard.nextInt();
             int otherDenomiator = keyboard.nextInt();
-            fractions fraction2 = new fractions(otherNumerator, otherDenomiator);
+            Fractions fraction2 = new Fractions(otherNumerator, otherDenomiator);
             if(fraction1.equals(fraction2)){
                 System.out.println("Fractions are identical.");
             } else{
