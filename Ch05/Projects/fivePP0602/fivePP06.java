@@ -12,15 +12,15 @@ public class fivePP06 {
         r1.add(r2);
         System.out.println("\nAddition result: " + r1);
 
-        r1 = new Rational(1, 2); // Reset r1 for subtraction test
+        r1 = new Rational(1, 2); 
         r1.subtract(r2);
         System.out.println("Subtraction result: " + r1);
 
-        r1 = new Rational(1, 2); // Reset r1 for multiplication test
+        r1 = new Rational(1, 2); 
         r1.multiply(r2);
         System.out.println("Multiplication result: " + r1);
 
-        r1 = new Rational(1, 2); // Reset r1 for division test
+        r1 = new Rational(1, 2); 
         r1.divide(r2);
         System.out.println("Division result: " + r1);
     }
