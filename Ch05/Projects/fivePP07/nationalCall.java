@@ -7,7 +7,7 @@ class NationalCall {
     private double cCallPrice;
     private double tPriceOfAllCalls;
 
-    public NationalCall(String intSourcePhoneNumber, String intDestinationPhoneNumber, int intTotalDurationOfCurrentCall) {
+    public NationalCall(String intSPN, String intDestinationPhoneNumber, int intTotalDurationOfCurrentCall) {
         sPN = intSourcePhoneNumber;
         dPN = intDestinationPhoneNumber;
         durationCurentCall = intTotalDurationOfCurrentCall;
