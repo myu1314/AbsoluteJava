@@ -7,11 +7,11 @@ class NationalCall {
     private double cCallPrice;
     private double tPriceOfAllCalls;
 
-    public NationalCall(String intSPN, String intDPN, int intTotalDurationOfCurrentCall) {
+    public NationalCall(String intSPN, String intDPN, int intDurationCurrentCall) {
         sPN = intSPN;
         dPN = intDPN;
-        durationCurentCall = intTotalDurationOfCurrentCall;
-        durationAllCalls += intTotalDurationOfCurrentCall;
+        durationCurentCall = intDurationCurrentCall;
+        durationAllCalls += intDurationCurrentCall;
         cCallPrice = calculateCallPrice(durationCurentCall);
         calculateDiscount();
         tPriceOfAllCalls += cCallPrice;

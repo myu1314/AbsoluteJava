@@ -1,14 +1,14 @@
 
 public class PizzaOrder {
     private int numberOfPizzas;
-    public Pizza pizza1;
-    public Pizza pizza2;
-    public Pizza pizza3;
+    public Person pizza1;
+    public Person pizza2;
+    public Person pizza3;
 
 
 
-    public PizzaOrder(int initalNumberOfPizzas, Pizza intialPizza1,
-    Pizza initalPizza2,Pizza intialPizza3) {
+    public PizzaOrder(int initalNumberOfPizzas, Person intialPizza1,
+    Person initalPizza2,Person intialPizza3) {
         pizza1 = intialPizza1;
         pizza2 = initalPizza2;
         pizza3 = intialPizza3;
@@ -24,20 +24,20 @@ public class PizzaOrder {
 
     public PizzaOrder() {
         numberOfPizzas = 1;
-        Pizza intialPizza1 = new Pizza("small", 1, 0, 0);
+        Person intialPizza1 = new Person("small", 1, 0, 0);
         pizza1 = intialPizza1;
         
     }
     public void setNumPizzas(int intialPizzaNum) {
         numberOfPizzas = intialPizzaNum;
     }
-    public void setPizza1(Pizza intialPizza1) {
+    public void setPizza1(Person intialPizza1) {
         pizza1 = intialPizza1;
     }
-    public void setPizza2(Pizza intialPizza2) {
+    public void setPizza2(Person intialPizza2) {
         pizza2 = intialPizza2;
     }
-    public void setPizza3(Pizza intialPizza3) {
+    public void setPizza3(Person intialPizza3) {
         pizza3 = intialPizza3;
     }
     public int calcTotal(){
