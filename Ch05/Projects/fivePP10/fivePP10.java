@@ -1,5 +1,3 @@
-package Ch05.Projects.fivePP10;
-
 import java.util.Scanner;
 
 public class fivePP10 {

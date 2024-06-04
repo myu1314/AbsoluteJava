@@ -1,4 +1,3 @@
-package Ch05.Projects.fivePP10;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.util.Random;
@@ -115,7 +114,7 @@ public class BoxOfProduce {
         int placeToAdd = 0;
         String[] fruits = new String[5];
         try {
-            fileIn = new Scanner(new FileInputStream("Ch04\\rsc\\ch4_PP13.txt"));
+            fileIn = new Scanner(new FileInputStream("Programming\\Java\\AbsoluteJava\\Ch05\\Projects\\fivePP10\\ch4_PP13.txt"));
 
             while (fileIn.hasNextLine()) {
                 fruits[placeToAdd] = fileIn.nextLine();

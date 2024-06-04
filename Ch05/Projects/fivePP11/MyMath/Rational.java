@@ -1,4 +1,4 @@
-package Ch05.Projects.fivePP11;
+package MyMath;
 
 public class Rational {
     private int num;

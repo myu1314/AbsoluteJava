@@ -1,5 +1,3 @@
-package Ch05.Projects.fivePP09;
-
 public class Main {
     public static void main(String[] args) {
         // Create birth and death dates
