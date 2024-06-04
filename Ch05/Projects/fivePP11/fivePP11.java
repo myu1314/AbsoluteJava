@@ -1,5 +1,3 @@
-
-
 import java.util.Scanner;
 public class fivePP11 {
     public static void main(String[] args) throws Exception {
