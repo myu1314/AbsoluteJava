@@ -172,8 +172,15 @@ public class Date {
     }
 
     public void setYear(int newYear) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'setYear'");
+        year = newYear;
+    }
+
+    public int getDay() {
+        return day;
+    }
+
+    public int getYear() {
+        return year;
     }
 
 };

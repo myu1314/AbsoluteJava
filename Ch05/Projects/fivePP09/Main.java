@@ -1,12 +1,10 @@
 package Ch05.Projects.fivePP09;
 
-import java.util.Date;
-
 public class Main {
     public static void main(String[] args) {
         // Create birth and death dates
         Date birthDate = new Date(10, 5, 1990);
-        Date deathDate = new Date(1, 1, 2020);
+        Date deathDate = new Date(1, 1, 2091);
 
         // Create a Person object
         Person person1 = new Person("John Doe", birthDate, deathDate);
@@ -23,7 +21,7 @@ public class Main {
         person1.setBirthDate(newBirthDate);
         System.out.println("Updated birth date of person1: " + person1.getBirthDate());
 
-        Date newDeathDate = new Date(12, 31, 2025);
+        Date newDeathDate = new Date(12, 31, 2105);
         person1.setDeathDate(newDeathDate);
         System.out.println("Updated death date of person1: " + person1.getDeathDate());
     }

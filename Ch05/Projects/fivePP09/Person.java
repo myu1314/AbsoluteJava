@@ -5,13 +5,22 @@ package Ch05.Projects.fivePP09;
  * Class invariant: A Person always has a date of birth, and if the Person
  * has a date of death, then the date of death is equal to or later than the
  * date of birth.
+ * @author: Mark and Java Textbook
+ * @version: 3
  */
+
 public class Person {
     private String name;
     private Date born;
-    private Date died; //null indicates still alive.
+    private Date died; 
 
-    public Person(String initialName, java.util.Date birthDate, java.util.Date deathDate) {
+    /**
+    * @param initialName name of the person
+    * @param birthDate date of birth
+    * @param deathDate date of death (null if still alive)
+    **/
+
+    public Person(String initialName, Date birthDate, Date deathDate) {
         if (consistent(birthDate, deathDate)) {
             name = initialName;
             born = new Date(birthDate);
@@ -24,7 +33,9 @@ public class Person {
             System.exit(0);
         }
     }
-
+    /**
+     * @param original person object to be copied
+     */ 
     public Person(Person original) {
         if (original == null )
         {
@@ -39,9 +50,9 @@ public class Person {
             died = new Date(original.died);
     }
 
-    public void set(String newName, Date birthDate, Date deathDate){
-
-    }
+     /**
+     * @return the a string version of person
+     */ 
      
 
     public String toString() {
@@ -52,7 +63,10 @@ public class Person {
             diedString = died.toString();
         return (name + ", " + born + "-" + diedString);
     }
-
+    /**
+     * @param otherPerson other object to compare too
+     * @return true or false depending on equality
+     */ 
     public boolean equals(Person otherPerson) {
         if (otherPerson == null)
             return false;
@@ -61,10 +75,11 @@ public class Person {
                     && born.equals(otherPerson.born)
                     && datesMatch(died, otherPerson.died) );
     }
-
     /**
-     * To match, date1 and date2 either must be the same date or must both be null.
-     */
+     * @param date1 the first date
+     * @param date2 the second date
+     * @return true or false depending on equality
+     */ 
     private static boolean datesMatch(Date date1, Date date2) {
         if (date1 == null)
             return (date2 == null);
@@ -73,11 +88,10 @@ public class Person {
         else //Both dates are not null.
             return (date1.equals(date2));
     }
-
+    
     /**
-     * Precondition: newDate is a consistent date of birth.
-     * Postcondition: Date of birth of the calling object is newDate.
-     */
+     * @param newDate new birth date
+     */ 
     public void setBirthDate(Date newDate) {
         if (consistent(newDate, died))
             born = new Date(newDate);
@@ -88,9 +102,8 @@ public class Person {
     }
 
     /**
-     * Precondition: newDate is a consistent date of death.
-     * Postcondition: Date of death of the calling object is newDate.
-     */
+     * @param newDate the new death date
+     */ 
     public void setDeathDate(Date newDate) {
         if (!consistent(born, newDate))
         {
@@ -109,9 +122,7 @@ public class Person {
     }
 
     /**
-     * Precondition: The date of birth has been set, and changing the year
-     * part of the date of birth will give a consistent date of birth.
-     * Postcondition: The year of birth is (changed to) newYear.
+     *  @param newYear the new birth year
      */
     public void setBirthYear(int newYear) {
         if (born == null) //Precondition is violated.
@@ -128,9 +139,7 @@ public class Person {
     }
 
     /**
-     * Precondition: The date of death has been set, and changing the year
-     * part of the date of death will give a consistent date of death.
-     * Postcondition: The year of death is (changed to) newYear.
+     *  @param newYear the new death year
      */
     public void setDeathYear(int newYear) {
         if (died == null) //Precondition is violated.
@@ -145,27 +154,32 @@ public class Person {
             System.exit(0);
         }
     }
-
+    /**
+     *  @return the name
+     */
     public String getName() {
         return name;
     }
-
-    public Date getBirthDate() {
-        return new Date(born);
+    /**
+     *  @return a string version of birthday.
+     */
+    public String getBirthDate() {
+        return (born.getMonth() + ", " + born.getDay() + ", " + born.getYear());
     }
-
-    public Date getDeathDate() {
+    /** 
+     *  @return a string version of deathday.
+     */
+    public String getDeathDate() {
         if (died == null)
             return null;
         else
-            return new Date(died);
+            return (died.getMonth() + ", " + died.getDay() + ", " + died.getYear());
     }
 
     /**
-     * To be consistent, birthDate must not be null. If there is no date of
-     * death (deathDate == null), that is consistent with any birthDate.
-     * Otherwise, the birthDate must come before or be equal to the
-     * deathDate.
+     * @param birthDate date of birth
+     * @param deathDate date of death
+     * @return true or false based on equality
      */
     private static boolean consistent(Date birthDate, Date deathDate) {
         if (birthDate == null)
