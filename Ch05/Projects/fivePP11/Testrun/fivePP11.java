@@ -4,10 +4,11 @@ import Finance.Money;
 import MyMath.Rational;
 
 public class fivePP11 {
-    
+
     private int num;
     private int den;
-    //money testing
+
+    // money testing
     public static void main(String[] args) throws Exception {
         Money money1 = new Money(10, 50);
         Money money2 = new Money(5, 25);
@@ -16,8 +17,8 @@ public class fivePP11 {
         System.out.println("+ result: " + result);
 
         result = Money.minus(money1, money2);
-        System.out.println("- result: " + result); 
-        //rational testing
+        System.out.println("- result: " + result);
+        // rational testing
         Rational r1 = new Rational(1, 2);
         Rational r2 = new Rational(3, 4);
 
@@ -38,5 +39,3 @@ public class fivePP11 {
         System.out.println("Division result: " + resultDivide);
     }
 }
-
-
