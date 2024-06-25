@@ -9,25 +9,24 @@ public class sixPP02 {
 
 
 
-    // This function is used to find the number at the x and y coordinate.
+
     public static int findNum(int xPos, int yPos, int[][] table) {
         return table[xPos][yPos];
     }
 
-    // Generating a table
+
     public static int[][] generateTable() {
         int[] cards = new int[CARDCOUNT];
         int[][] table = new int[ROWNUMBER][COLUMNNUMBER];
         int pos = 0;
 
-        // This for loop is to create 16 unshuffled cards
         for (int i = 0; i <= (CARDCOUNT) / 2 - 1; i++) {
             cards[pos] = i + 1;
             cards[pos + 1] = i + 1;
             pos += 2;
         }
 
-        // This shuffles the cards
+
         Random rand = new Random();
         int pos1, pos2, transition;
         for (int i = 0; i <= CARDCOUNT; i++) {
@@ -38,7 +37,6 @@ public class sixPP02 {
             cards[pos2] = transition;
         }
 
-        // This block of code is to make sure that one 8 is at coordinate 0,0.
         int eight1pos = -1;
         int givenPos = 0;
         for (int i = 0; i < cards.length; i++) {
@@ -53,7 +51,7 @@ public class sixPP02 {
             cards[givenPos] = transition;
         }
 
-        // This block of code is to make sure that one 8 is at coordinate 2,3.
+
         givenPos = ROWNUMBER * 2 + 1;
         eight1pos = -1;
         for (int i = 0; i < cards.length; i++) {
@@ -68,7 +66,7 @@ public class sixPP02 {
             cards[givenPos] = transition;
         }
 
-        // Assigning the shuffled cards to the table
+
         for (int i = 0; i < ROWNUMBER; i++) {
             for (int j = 0; j < COLUMNNUMBER; j++) {
                 table[i][j] = cards[i * 4 + j];
@@ -77,7 +75,6 @@ public class sixPP02 {
         return table;
     }
 
-    // This function prints a table when given an array
     public static void printTable(int[][] table) {
         System.out.println("\n");
         System.out.println("   1 2 3 4");
@@ -96,7 +93,6 @@ public class sixPP02 {
         }
     }
 
-    // Asking for user input for coords
     public static int askForInput(String askPos) {
         Scanner scanner = new Scanner(System.in);
         int pos = -1;
@@ -110,13 +106,13 @@ public class sixPP02 {
                 }
             } else {
                 System.out.println("Invalid input. Please enter a number between 1 and 4.");
-                scanner.next(); // clear invalid input
+                scanner.next(); 
             }
         }
         return pos - 1;
     }
 
-    // Checks if the playingTable is full
+
     public static boolean isGameOver(int[][] playingTable) {
         for (int i = 0; i < ROWNUMBER; i++) {
             for (int j = 0; j < COLUMNNUMBER; j++) {
@@ -128,7 +124,6 @@ public class sixPP02 {
         return true;
     }
 
-    // Running the game
     public static void gameCycle(int[][] playingTable, int[][] answerTable) {
         boolean gameStillOn = true;
         int turnCount = 0;
@@ -166,7 +161,7 @@ public class sixPP02 {
         System.out.println("Great Job!!!!");
     }
 
-    // Creating an empty playing table
+
     public static int[][] creatingPlayingTable(int length, int width) {
         int[][] table = new int[ROWNUMBER][COLUMNNUMBER];
         for (int i = 0; i < ROWNUMBER; i++) {
@@ -177,7 +172,6 @@ public class sixPP02 {
         return table;
     }
 
-    // Starting Game
     public static void main(String[] args) throws InterruptedException {
         Scanner scanner = new Scanner(System.in);
         int[][] answerTable = generateTable();
