@@ -15,10 +15,11 @@ public class Student {
       int[] validMarks = new int[marks.length];
       int validCount = 0;
 
-      for (int mark : marks) {
-          if (mark >= 0 && mark <= 100) {
-              validMarks[validCount] = mark;
-              validCount++;
+      for (int mark = 0; mark < marks.length; mark++) {
+        int markHolder = marks[mark];  
+        if (markHolder >= 0 && markHolder <= 100) {
+            validMarks[validCount] = markHolder;
+            validCount++;
           }
       }
 
