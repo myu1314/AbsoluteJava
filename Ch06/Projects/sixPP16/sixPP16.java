@@ -1,5 +1,5 @@
 
-public class sixPP15 {
+public class sixPP16 {
     public static void main(String[] args) throws Exception {
         
         Pizza pizza1 = new Pizza("large",1,0,1);// Code to create a large pizza, 1 cheese, 1 ham
