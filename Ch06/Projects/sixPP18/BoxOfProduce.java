@@ -10,8 +10,10 @@ public class BoxOfProduce {
     public int maximumSize = 3;
     private String fruitArray[] = new String[maximumSize];
 
-    public String toString() {
-        return ("Fruit 1 " + fruitArray[0] + " Fruit 2 " + fruitArray[1] + " Fruit 3 " + fruitArray[2]);
+    public void printDetails() {
+        for(int i = 0; i < maximumSize; i++){
+            System.out.println("Fruit " + (i+1) + " " + fruitArray[i]);
+        }
     }
 
     public BoxOfProduce() {
@@ -82,7 +84,7 @@ public class BoxOfProduce {
         int placeToAdd = 0;
         String[] fruits = new String[5];
         try {
-            fileIn = new Scanner(new FileInputStream("Ch04\\rsc\\ch4_PP13.txt"));
+            fileIn = new Scanner(new FileInputStream("Ch06\\rsc\\ch4_PP13.txt"));
 
             while (fileIn.hasNextLine()) {
                 fruits[placeToAdd] = fileIn.nextLine();
@@ -108,7 +110,7 @@ public class BoxOfProduce {
         if (checkIfIn(fruitToAdd)) {
             maximumSize += 1;
             String[] newArray = new String[maximumSize];
-            for (int i = 0; i < newArray.length; i++) {
+            for (int i = 0; i < fruitArray.length; i++) {
                 newArray[i] = fruitArray[i];
             }
             fruitArray = newArray;
@@ -120,12 +122,12 @@ public class BoxOfProduce {
     public boolean checkIfIn(String fruitName) {
         try {
             Scanner fileIn = null;
-            fileIn = new Scanner(new FileInputStream("Ch04\\rsc\\ch4_PP13.txt"));
+            fileIn = new Scanner(new FileInputStream("Ch06\\rsc\\ch4_PP13.txt"));
             String stringToCheck;
             boolean result = false;
             for (int i = 0; i < 5; i++) {
                 stringToCheck = fileIn.nextLine();
-                if (fruitName == stringToCheck) {
+                if (fruitName.equals(stringToCheck)) {
                     result = true;
                 }
             }
