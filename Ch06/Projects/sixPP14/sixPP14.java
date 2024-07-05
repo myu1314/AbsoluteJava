@@ -1,6 +1,4 @@
 import java.util.Scanner;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
 import java.util.Random;
 
 public class sixPP14 {
@@ -40,6 +38,7 @@ public class sixPP14 {
         else{
             System.out.println("Incorrect Pin");
         }
+        keyboard.close();
 
     }
 

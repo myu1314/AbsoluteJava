@@ -57,5 +57,6 @@ public class sixPP06 {
         for (int i = 0; i < uniqueCount; i++) {
             System.out.println(uniqueElements[i] + " " + counts[i]);
         }
+        scanner.close();
     }
 }

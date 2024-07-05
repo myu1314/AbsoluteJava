@@ -1,7 +1,4 @@
 import java.util.Scanner;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
-import java.util.Random;
 
 public class Trivia {
     String question;

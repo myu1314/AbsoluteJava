@@ -1,7 +1,5 @@
 import java.util.Scanner;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
-import java.util.Random;
+
 
 public class sixPP13 {
 
@@ -39,6 +37,7 @@ public class sixPP13 {
             playerPoints += q5.getPoints(); 
         }
     System.out.println("Total points: " + playerPoints);
+    keyboard.close();
     }
     
 }

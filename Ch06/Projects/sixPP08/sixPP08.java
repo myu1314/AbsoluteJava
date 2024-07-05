@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 public class sixPP08 {
     public static void main(String[] args) {
       int[] arrayToSort = {1,3,2,4,5,6,1,8,912039,120391,-111,123};

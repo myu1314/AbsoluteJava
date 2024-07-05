@@ -1,6 +1,4 @@
 import java.util.Scanner;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
 import java.util.Random;
 
 
@@ -63,9 +61,7 @@ public class sixPP10 {
                 }
             }
             gameboard[cordY][cordX] = "N";
-            
+            keyboard.close();
         }
-        
-        
     }
 }

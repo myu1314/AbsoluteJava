@@ -60,6 +60,7 @@ public class sixPP07 {
                 continueProgram = false;
             }
         }
+        scanner.close();
     }
 
   
@@ -77,5 +78,6 @@ public class sixPP07 {
             carry = sum / 10;
         }
         result[maxDigits] = carry;
+        
     }
 } 

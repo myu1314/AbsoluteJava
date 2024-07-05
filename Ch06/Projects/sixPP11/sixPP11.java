@@ -1,7 +1,4 @@
 import java.util.Scanner;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
-import java.util.Random;
 
 public class sixPP11 {
     public static int cordX;
@@ -62,5 +59,6 @@ public class sixPP11 {
             }
             System.out.println("");
         }
+        keyboard.close();
     }
 }

@@ -1,7 +1,5 @@
 import java.util.Scanner;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
-import java.util.Random;
+
 
 public class sixPP12 {
 
@@ -29,6 +27,6 @@ public class sixPP12 {
             }
         }
         System.out.println("Total amount of Points:" +  playerPoints);
-
+        keyboard.close();
     }
 }

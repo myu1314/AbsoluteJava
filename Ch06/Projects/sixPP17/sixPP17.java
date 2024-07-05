@@ -4,92 +4,77 @@ import java.util.Scanner;
 import java.util.StringTokenizer;
 
 public class sixPP17 {
+    @SuppressWarnings("resource")
     public static void main(String[] args) throws Exception {
         Scanner fileIn = null;
-        double product1Average = 0;
-        double product2Average = 0;
-        double product3Average = 0;
-        double product4Average = 0;
-        double product5Average = 0;
-        double product1NOR = 0;
-        double product2NOR = 0;
-        double product3NOR = 0;
-        double product4NOR = 0;
-        double product5NOR = 0;
-        double numberOfReviews = 0;
-        double numberToCheck;
+        int storageOfInts[][] = new int[4][5];
+        int numberOfReviews = 0;
+        int numberToCheck;
         String line;
         String deliminters = ",";
 
         try {
-            fileIn = new Scanner(new FileInputStream("Ch06\\rsc\\ch6_PP16.csv"));
+            fileIn = new Scanner(new FileInputStream("Ch06\\rsc\\ch6_PP17.csv"));
             fileIn.nextLine();
             while (fileIn.hasNextLine()) {
                 numberOfReviews += 1;
                 fileIn.nextLine();
+            }
+            double productAverage[] = new double[5];
+            double productNOR[] = new double[5];
+            double productTotal[] = new double[5];
 
+            for (int i = 0; i < 5; i++) {
+                productAverage[i] = 0;
+                productNOR[i] = 0;
+                productTotal[i] = 0;
             }
 
             fileIn = new Scanner(new FileInputStream("Ch06\\rsc\\ch6_PP17.csv"));
-            line = fileIn.nextLine();
-            StringTokenizer wordFactory = new StringTokenizer(line, deliminters);
-            
-            for (int i = 0; i < numberOfReviews; i++) {
+
+            fileIn.nextLine();
+            for (int i = 1; i < 4; i++) {
                 line = fileIn.nextLine();
-                wordFactory = new StringTokenizer(line, deliminters);
-                numberToCheck = convertNumber(wordFactory.nextToken());
-                if (numberToCheck != 0) {
-                    product1NOR += 1;
-                }
-                product1Average += numberToCheck;
-
-                numberToCheck = convertNumber(wordFactory.nextToken());
-                if (numberToCheck != 0) {
-                    product2NOR += 1;
-                }
-                product2Average += numberToCheck;
-
-                numberToCheck = convertNumber(wordFactory.nextToken());
-                if (numberToCheck != 0) {
-                    product3NOR += 1;
-                }
-                product3Average += numberToCheck;
-
-                numberToCheck = convertNumber(wordFactory.nextToken());
-                if (numberToCheck != 0) {
-                    product4NOR += 1;
-                }
-                product4Average += numberToCheck;
-
-                numberToCheck = convertNumber(wordFactory.nextToken());
-                if (numberToCheck != 0) {
-                    product5NOR += 1;
-                }
-                product5Average += numberToCheck;
-
-                
-
-            }
-            fileIn.close();
-            product1Average = product1Average / product1NOR;
-            product2Average = product2Average / product2NOR;
-            product3Average = product3Average / product3NOR;
-            product4Average = product4Average / product4NOR;
-            product5Average = product5Average / product5NOR;
-            System.out.println("The average for A is " + product1Average);
-            System.out.println("The average for B is " + product2Average);
-            System.out.println("The average for C is " + product3Average);
-            System.out.println("The average for D is " + product4Average);
-            System.out.println("The average for E is " + product5Average);
+                StringTokenizer wordFactory = new StringTokenizer(line, deliminters);
+                for (int j = 0; j < 5; j++) {
+                    numberToCheck = convertNumber(wordFactory.nextToken());
+                    storageOfInts[i][j] = numberToCheck;
+                    productTotal[j] += numberToCheck;
+                    productNOR[j] += 1;
             
+            }
+        }
+            System.out.print("[");
+            for (int i = 0; i < 4; i++) {
+                System.out.print(productTotal[i] + ", ");
+            }
+            System.out.print(productTotal[4]);
+            System.out.println("]");
+            System.out.print("[");
+            for (int i = 0; i < 4; i++) {
+                System.out.print(productNOR[i] + ", ");
+            }
+            System.out.print(productNOR[4]);
+            System.out.println("]");
+
+
+            fileIn.close();
+            for (int i = 0; i < 5; i++) {
+                productAverage[i] = productTotal[i] / productNOR[i];
+            }
+            System.out.printf("The average for A is %2.2f \n", productAverage[0]);
+            System.out.printf("The average for B is %2.2f \n", productAverage[1]);
+            System.out.printf("The average for C is %2.2f \n", productAverage[2]);
+            System.out.printf("The average for D is %2.2f \n", productAverage[3]);
+            System.out.printf("The average for E is %2.2f \n", productAverage[4]);
         } catch (FileNotFoundException e) {
             System.out.println("File Not Found");
         }
 
     }
 
-    static double convertNumber(String number) {
-        double numToReturn = 0;
+    static int convertNumber(String number) {
+        int numToReturn = 0;
         if (number.equals("1")) {
             numToReturn = 1;
         } else if (number.equals("2")) {
