@@ -109,7 +109,8 @@ public class sixPP02 {
                 scanner.next(); 
             }
         }
-        return pos - 1;
+        scanner.close();
+        return pos - 1;    
     }
 
 
@@ -126,11 +127,9 @@ public class sixPP02 {
 
     public static void gameCycle(int[][] playingTable, int[][] answerTable) {
         boolean gameStillOn = true;
-        int turnCount = 0;
         Scanner scanner = new Scanner(System.in);
 
         while (gameStillOn) {
-            turnCount++;
             int num1Xpos = askForInput("x");
             int num1Ypos = askForInput("y");
             int num2Xpos = askForInput("x");
@@ -158,6 +157,7 @@ public class sixPP02 {
             }
             printTable(playingTable);
         }
+        scanner.close();
         System.out.println("Great Job!!!!");
     }
 
@@ -194,5 +194,6 @@ public class sixPP02 {
             printTable(playingTable);
             gameCycle(playingTable, answerTable);    
         }
+        scanner.close();
     }
 }

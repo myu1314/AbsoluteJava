@@ -8,13 +8,10 @@ public class sixPP03 {
     int[] otHours = new int[12];
     int[] otMultipler = new int[12];
     Scanner keyboard = new Scanner(System.in);
-    int totalSalary = 0;
-    int totalOtPayout = 0;
     int OTmultiplier = 0;
     for (int i = 0; i < 12; i++) {
       System.out.println("Salary in month " + (i+1) + ":");
       salary[i] = keyboard.nextInt();
-      totalSalary += salary[i];
       System.out.println("Overtime hours in month " + (i+1) + ":");
       otHours[i] = keyboard.nextInt();
       if (salary[i] > 10000){
@@ -30,7 +27,6 @@ public class sixPP03 {
         OTmultiplier = 10;
       }
       otMultipler[i] = OTmultiplier;  
-      totalOtPayout += otHours[i] * OTmultiplier;
     }
     
     
