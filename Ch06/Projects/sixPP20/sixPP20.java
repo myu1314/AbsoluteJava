@@ -2,7 +2,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-public class sixPP19 {
+public class sixPP20 {
     @SuppressWarnings("resource")
     public static void main(String[] args) throws Exception {
 
@@ -14,7 +14,6 @@ public class sixPP19 {
             Scanner fileIn = null;
             boolean result = false;
             fileIn = new Scanner(new FileInputStream("Ch06\\rsc\\ch6_PP19.txt"));
-            System.out.println("The words that work are: ");
             while (fileIn.hasNextLine()) {
                 wordToCheck = fileIn.nextLine();
                 lettersInWordCheck = wordToCheck.toCharArray();
@@ -29,6 +28,7 @@ public class sixPP19 {
                         break;
                     }
                 }
+                System.out.println("The words that work are: ");
                 if (result == true) {
                     System.out.print(wordToCheck + " ");
                 }
