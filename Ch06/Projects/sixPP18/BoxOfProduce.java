@@ -84,7 +84,7 @@ public class BoxOfProduce {
         int placeToAdd = 0;
         String[] fruits = new String[5];
         try {
-            fileIn = new Scanner(new FileInputStream("Ch06\\rsc\\ch4_PP13.txt"));
+            fileIn = new Scanner(new FileInputStream("Ch06\\rsc\\ch6_PP18.txt"));
 
             while (fileIn.hasNextLine()) {
                 fruits[placeToAdd] = fileIn.nextLine();
@@ -122,7 +122,7 @@ public class BoxOfProduce {
     public boolean checkIfIn(String fruitName) {
         try {
             Scanner fileIn = null;
-            fileIn = new Scanner(new FileInputStream("Ch06\\rsc\\ch4_PP13.txt"));
+            fileIn = new Scanner(new FileInputStream("Ch06\\rsc\\ch6_PP18.txt"));
             String stringToCheck;
             boolean result = false;
             for (int i = 0; i < 5; i++) {
