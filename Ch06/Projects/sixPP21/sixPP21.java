@@ -16,10 +16,6 @@ public class sixPP21 {
         add("Micheal", 9);
         add("John", 10);
         add("William", 2);
-        for(int i = 0; i < 10; i++){
-            playerList[i] = playerNew;
-            playerList[i].print();
-        }
         print();
         findPlayerScore("John");
         remove("Micheal");
@@ -28,13 +24,13 @@ public class sixPP21 {
 
     public static void print() {
         int placeToAdd = 0;
+        // for (int i = 0; i < 10; i++) {
+        //     if (playerList[i].getName().equalsIgnoreCase("Unnamed")) {
+        //         placeToAdd = i;
+        //         break;
+        //     }
+        // }
         for (int i = 0; i < 10; i++) {
-            if (playerList[i].getName().equalsIgnoreCase("Unnamed")) {
-                placeToAdd = i;
-                break;
-            }
-        }
-        for (int i = 0; i < placeToAdd; i++) {
             playerList[i].print();
         }
     }

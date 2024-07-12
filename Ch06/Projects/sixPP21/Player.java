@@ -19,7 +19,7 @@ public class Player {
         playerName = intPlayerName;
         playerHighScore = intPlayerHighScore;
     }
-
+    
     public static void print() {
         System.out.println(playerName + ": " + playerHighScore);
     }
