@@ -18,7 +18,7 @@ public class sixPP21 {
         add("William", 2);
         print();
         findPlayerScore("John");
-        remove("Micheal");
+        //remove("Micheal");
         print();
     }
 
@@ -30,8 +30,10 @@ public class sixPP21 {
         //         break;
         //     }
         // }
+        System.out.println("1");
         for (int i = 0; i < 10; i++) {
             playerList[i].print();
+            System.out.println("1");
         }
     }
 
@@ -50,13 +52,16 @@ public class sixPP21 {
     }
 
     public static void add(String Name, int Points) {
+        boolean added = false;
         for (int i = 0; i < 10; i++) {
-            System.out.println(i);
-            if (playerList[i].getName().equalsIgnoreCase("Unnamed")) {
-                playerList[i].setName(Name);
-                playerList[i].setScore(Points);
-                System.out.println("Player Added Successfully");
-                break;
+            while(added == false){
+                if (playerList[i].getName().equalsIgnoreCase("Unnamed")) {
+                    System.out.println(i);
+                    playerList[i].setName(Name);
+                    playerList[i].setScore(Points);
+                    System.out.println("Player Added Successfully");
+                    added = true;
+                }
             }
         }
 
