@@ -4,23 +4,23 @@ import java.util.Scanner;
 
 public class Player {
     @SuppressWarnings("resource")
-    public static String playerName;
-    public static int playerHighScore;
+    public String playerName;
+    public int playerHighScore;
 
     public Player(){
-        playerName = "Unnamed";
-        playerHighScore = 0;
+        this.playerName = "Unnamed";
+        this.playerHighScore = 0;
     }
     public Player(String intPlayerName){
-        playerName = intPlayerName;
-        playerHighScore = 0;
+        this.playerName = intPlayerName;
+        this.playerHighScore = 0;
     }
     public Player(String intPlayerName, int intPlayerHighScore){
-        playerName = intPlayerName;
-        playerHighScore = intPlayerHighScore;
+        this.playerName = intPlayerName;
+        this.playerHighScore = intPlayerHighScore;
     }
     
-    public static void print() {
+    public void print() {
         System.out.println(playerName + ": " + playerHighScore);
     }
     public String getName(){
@@ -30,17 +30,10 @@ public class Player {
         return playerHighScore;
     }
     public void setName(String name) {
-        playerName = name;
+        this.playerName = name;
     }
     public void setScore(int points) {
-        playerHighScore = points;
-    }
-    public boolean isNull(){
-        boolean result = false;
-        if(playerName == null){
-            result = true;
-        }
-        return result;
+        this.playerHighScore = points;
     }
     
 }

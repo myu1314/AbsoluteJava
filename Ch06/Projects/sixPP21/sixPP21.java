@@ -6,34 +6,30 @@ public class sixPP21 {
     @SuppressWarnings("resource")
     public static Player playerList[] = new Player[10];
 
-
     public static void main(String[] args) throws Exception {
         Player playerNew = new Player();
-        for(int i = 0; i < 10; i++){
+        for (int i = 0; i < 10; i++) {
             playerList[i] = playerNew;
-            playerList[i].print();
         }
         add("Micheal", 9);
         add("John", 10);
         add("William", 2);
         print();
         findPlayerScore("John");
-        //remove("Micheal");
+        remove("Micheal");
         print();
     }
 
     public static void print() {
         int placeToAdd = 0;
-        // for (int i = 0; i < 10; i++) {
-        //     if (playerList[i].getName().equalsIgnoreCase("Unnamed")) {
-        //         placeToAdd = i;
-        //         break;
-        //     }
-        // }
-        System.out.println("1");
         for (int i = 0; i < 10; i++) {
+            if (playerList[i].getName().equalsIgnoreCase("Unnamed")) {
+                placeToAdd = i;
+                break;
+            }
+        }
+        for (int i = 0; i < placeToAdd; i++) {
             playerList[i].print();
-            System.out.println("1");
         }
     }
 
@@ -52,19 +48,13 @@ public class sixPP21 {
     }
 
     public static void add(String Name, int Points) {
-        boolean added = false;
         for (int i = 0; i < 10; i++) {
-            while(added == false){
-                if (playerList[i].getName().equalsIgnoreCase("Unnamed")) {
-                    System.out.println(i);
-                    playerList[i].setName(Name);
-                    playerList[i].setScore(Points);
-                    System.out.println("Player Added Successfully");
-                    added = true;
-                }
+            if (playerList[i].getName().equalsIgnoreCase("Unnamed")) {
+                Player playerToAdd = new Player(Name, Points);
+                playerList[i] = playerToAdd;
+                break;
             }
         }
-
     }
 
     public static void remove(String Name) {
@@ -79,7 +69,7 @@ public class sixPP21 {
             playerList[i].setName(playerList[i + 1].getName());
             playerList[i].setScore(playerList[i + 1].getScore());
         }
-        playerList[placeToAdd].setName("Unnamened");
+        playerList[placeToAdd].setName("Unnamed");
         playerList[placeToAdd].setScore(0);
 
     }
