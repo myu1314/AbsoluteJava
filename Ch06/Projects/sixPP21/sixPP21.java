@@ -2,15 +2,24 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-public class sixPP20 {
+public class sixPP21 {
     @SuppressWarnings("resource")
-    public static String playerName[] = new String[10];
-    public static int playerHighScore[] = new int[10];
+    public static Player playerList[] = new Player[10];
+
 
     public static void main(String[] args) throws Exception {
+        Player playerNew = new Player();
+        for(int i = 0; i < 10; i++){
+            playerList[i] = playerNew;
+            playerList[i].print();
+        }
         add("Micheal", 9);
         add("John", 10);
         add("William", 2);
+        for(int i = 0; i < 10; i++){
+            playerList[i] = playerNew;
+            playerList[i].print();
+        }
         print();
         findPlayerScore("John");
         remove("Micheal");
@@ -20,21 +29,21 @@ public class sixPP20 {
     public static void print() {
         int placeToAdd = 0;
         for (int i = 0; i < 10; i++) {
-            if (playerName[i] == null) {
+            if (playerList[i].getName().equalsIgnoreCase("Unnamed")) {
                 placeToAdd = i;
                 break;
             }
         }
         for (int i = 0; i < placeToAdd; i++) {
-            System.out.println(playerName[i] + ": " + playerHighScore[i]);
+            playerList[i].print();
         }
     }
 
     public static void findPlayerScore(String name) {
         int playerScore = -1;
         for (int i = 0; i < 10; i++) {
-            if (name.equalsIgnoreCase(playerName[i])) {
-                playerScore = playerHighScore[i];
+            if (name.equalsIgnoreCase(playerList[i].getName())) {
+                playerScore = playerList[i].getScore();
                 System.out.println(name + " has " + playerScore + " points");
             }
         }
@@ -46,9 +55,10 @@ public class sixPP20 {
 
     public static void add(String Name, int Points) {
         for (int i = 0; i < 10; i++) {
-            if (playerName[i] == null) {
-                playerName[i] = Name;
-                playerHighScore[i] = Points;
+            System.out.println(i);
+            if (playerList[i].getName().equalsIgnoreCase("Unnamed")) {
+                playerList[i].setName(Name);
+                playerList[i].setScore(Points);
                 System.out.println("Player Added Successfully");
                 break;
             }
@@ -59,18 +69,17 @@ public class sixPP20 {
     public static void remove(String Name) {
         int placeToAdd = 0;
         for (int i = 0; i < 10; i++) {
-            if (playerName[i] == null) {
+            if (playerList[i] == null) {
                 placeToAdd = i;
                 break;
             }
         }
         for (int i = 0; i <= placeToAdd; i++) {
-            playerName[i] = playerName[i + 1];
-            playerHighScore[i] = playerHighScore[i + 1];
-
+            playerList[i].setName(playerList[i + 1].getName());
+            playerList[i].setScore(playerList[i + 1].getScore());
         }
-        playerName[placeToAdd] = null;
-        playerHighScore[placeToAdd] = 0;
+        playerList[placeToAdd].setName("Unnamened");
+        playerList[placeToAdd].setScore(0);
 
     }
 }
